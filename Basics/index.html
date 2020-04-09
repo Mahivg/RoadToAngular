@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="my-styles.css" />
+  </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>contact us</li>
+        </ul>
+      </nav>
+    </header>
     <div>
       <!-- Headings -->
-      <h1 id="heading1">Headings...</h1>
+      <h1 id="heading1" style="color: #930000;">Headings...</h1>
+      <!-- Inline CSS -->
+      <h2>Headings...</h2>
       <h2 name="heading2">Headings...</h2>
-      <h3>Headings...</h3>
+      <h3 class="head3">Headings...</h3>
       <h4>Headings...</h4>
       <h5>Headings...</h5>
       <h6>Headings...</h6>
@@ -21,6 +34,16 @@
         passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum
       </p>
+
+      <div id="fixed">
+        fixed
+        <div id="relative">
+          relative
+          <div id="absolute">
+            Absolute
+          </div>
+        </div>
+      </div>
 
       <br />
 
@@ -147,6 +170,18 @@
 
     <abbr title="World wide web"> WWW</abbr>
 
-    <div style="margin-top: 500px;"></div>
+    <div style="margin: 10px;">
+      <span> Span 1 </span>
+      <span> Span 2</span>
+    </div>
+
+    <div
+      style="
+        margin-top: 500px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+      "
+    ></div>
   </body>
 </html>
