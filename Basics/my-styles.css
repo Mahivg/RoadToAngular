@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 10px;
+}
+
 header {
   position: relative;
   top: 0;
@@ -7,14 +15,20 @@ header {
 header nav ul {
   background-color: black;
   color: white;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
 }
 
 header nav ul li {
+  display: inline;
+  margin-right: 10px;
 }
 
 ul li:nth-child(odd) {
   color: green;
 }
+
 h2 {
   font-size: 20px;
   color: blue;

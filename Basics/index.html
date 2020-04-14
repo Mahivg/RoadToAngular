@@ -2,6 +2,12 @@
 <html>
   <head>
     <link rel="stylesheet" href="my-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
@@ -13,175 +19,179 @@
         </ul>
       </nav>
     </header>
-    <div>
-      <!-- Headings -->
-      <h1 id="heading1" style="color: #930000;">Headings...</h1>
-      <!-- Inline CSS -->
-      <h2>Headings...</h2>
-      <h2 name="heading2">Headings...</h2>
-      <h3 class="head3">Headings...</h3>
-      <h4>Headings...</h4>
-      <h5>Headings...</h5>
-      <h6>Headings...</h6>
-      <p>
-        <strong>Lorem Ipsum </strong> is simply <em> dummy text </em> of the
-        printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book. It has
-        survived not only five centuries, but also the leap into electronic
-        typesetting, remaining essentially unchanged. It was popularised in the
-        1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus
-        PageMaker including versions of Lorem Ipsum
-      </p>
+    <div class="container">
+      <div>
+        <!-- Headings -->
+        <h1 id="heading1" style="color: #930000;">Headings...</h1>
+        <!-- Inline CSS -->
+        <h2>Headings...</h2>
+        <h2 name="heading2">Headings...</h2>
+        <h3 class="head3">Headings...</h3>
+        <h4>Headings...</h4>
+        <h5>Headings...</h5>
+        <h6>Headings...</h6>
+        <p id="myPTag">
+          <strong>Lorem Ipsum </strong> is simply <em> dummy text </em> of the
+          printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took
+          a galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged. It was popularised in
+          the 1960s with the release of Letraset sheets containing Lorem Ipsum
+          passages, and more recently with desktop publishing software like
+          Aldus PageMaker including versions of Lorem Ipsum
+        </p>
 
-      <div id="fixed">
-        fixed
-        <div id="relative">
-          relative
-          <div id="absolute">
-            Absolute
+        <div id="fixed">
+          fixed
+          <div id="relative">
+            relative
+            <div id="absolute">
+              Absolute
+            </div>
           </div>
         </div>
+
+        <br />
+
+        <!-- List -->
+        Unordered List
+
+        <ul>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+        </ul>
+
+        Ordered List
+
+        <ol>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+        </ol>
       </div>
+      <!-- Commentted  -->
 
       <br />
 
-      <!-- List -->
-      Unordered List
+      Anchor Tag
 
-      <ul>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-      </ul>
+      <a href="https://www.google.co.in/" target="_blank">
+        <h1>Test</h1>
+      </a>
 
-      Ordered List
+      <br />
+      Table
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nam1</td>
+            <td>Description 1</td>
+          </tr>
 
-      <ol>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-      </ol>
+          <tr>
+            <td>Nam 2</td>
+            <td>Description 2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+      Form
+
+      <form onsubmit="onMethod()">
+        <div>
+          <label> Name : </label>
+          <input id="name" type="text" />
+        </div>
+        <br />
+        <div>
+          <label> Date : </label>
+          <input id="date" type="date" />
+        </div>
+        <br />
+        <div>
+          <label> Gender : </label>
+          <select>
+            <option value=""> Default</option>
+            <option value="male"> Male </option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <br />
+
+        <div>
+          <label> Gender : </label>
+          <input type="radio" name="gender" /> Male
+          <input type="radio" name="gender" /> Female
+        </div>
+        <br />
+
+        <div>
+          <label> Gender : </label>
+          <input type="checkbox" /> Male <input type="checkbox" /> Female
+        </div>
+        <br />
+        <div>
+          <label> Button : </label>
+          <button type="button" id="myBtn">button</button>
+          <button type="submit" onclick="onSubmit(event)">submit</button>
+        </div>
+        <br />
+      </form>
+
+      <br />
+
+      <img
+        src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        height="150"
+        width="100"
+        alt="Image is not ready"
+      />
+
+      <br />
+
+      <blockquote>
+        <strong>Lorem Ipsum </strong> is simply <em> dummy text </em> of the
+        printing and typesetting industry. <small>Lorem Ipsum </small>has been
+        the industry's standard dummy text ever since the 1500s, when an unknown
+        printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was
+        popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum
+      </blockquote>
+
+      <abbr title="World wide web"> WWW</abbr>
+
+      <div style="margin: 10px;">
+        <span> Span 1 </span>
+        <span> Span 2</span>
+      </div>
+
+      <div
+        style="
+          margin-top: 500px;
+          margin-bottom: 10px;
+          margin-right: 5px;
+          margin-left: 5px;
+        "
+      ></div>
     </div>
-    <!-- Commentted  -->
 
-    <br />
-
-    Anchor Tag
-
-    <a href="https://www.google.co.in/" target="_blank">
-      <h1>Test</h1>
-    </a>
-
-    <br />
-    Table
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Nam1</td>
-          <td>Description 1</td>
-        </tr>
-
-        <tr>
-          <td>Nam 2</td>
-          <td>Description 2</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <br />
-    Form
-
-    <form onsubmit="onMethod()">
-      <div>
-        <label> Name : </label>
-        <input type="text" />
-      </div>
-      <br />
-      <div>
-        <label> Date : </label>
-        <input type="date" />
-      </div>
-      <br />
-      <div>
-        <label> Gender : </label>
-        <select>
-          <option value=""> Default</option>
-          <option value="male"> Male </option>
-          <option value="female">Female</option>
-        </select>
-      </div>
-      <br />
-
-      <div>
-        <label> Gender : </label>
-        <input type="radio" name="gender" /> Male
-        <input type="radio" name="gender" /> Female
-      </div>
-      <br />
-
-      <div>
-        <label> Gender : </label>
-        <input type="checkbox" /> Male <input type="checkbox" /> Female
-      </div>
-      <br />
-      <div>
-        <label> Button : </label>
-        <button type="button">button</button>
-        <button type="submit">submit</button>
-      </div>
-      <br />
-    </form>
-
-    <br />
-
-    <img
-      src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      height="150"
-      width="100"
-      alt="Image is not ready"
-    />
-
-    <br />
-
-    <blockquote>
-      <strong>Lorem Ipsum </strong> is simply <em> dummy text </em> of the
-      printing and typesetting industry. <small>Lorem Ipsum </small>has been the
-      industry's standard dummy text ever since the 1500s, when an unknown
-      printer took a galley of type and scrambled it to make a type specimen
-      book. It has survived not only five centuries, but also the leap into
-      electronic typesetting, remaining essentially unchanged. It was
-      popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software
-      like Aldus PageMaker including versions of Lorem Ipsum
-    </blockquote>
-
-    <abbr title="World wide web"> WWW</abbr>
-
-    <div style="margin: 10px;">
-      <span> Span 1 </span>
-      <span> Span 2</span>
-    </div>
-
-    <div
-      style="
-        margin-top: 500px;
-        margin-bottom: 10px;
-        margin-right: 5px;
-        margin-left: 5px;
-      "
-    ></div>
+    <script src="myTSFile.js"></script>
   </body>
 </html>
