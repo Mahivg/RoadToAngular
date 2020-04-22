@@ -1,51 +1,61 @@
-<p>product-detail works!</p>
-<h1>One Way Data bindign</h1>
+<div *ngIf="false">
+  <p>product-detail works!</p>
+  <h1>One Way Data bindign</h1>
 
-<h4>String Interpolation</h4>
+  <h4>String Interpolation</h4>
 
-<p>{{ "My Name is : " + getName() }}</p>
+  <p>{{ "My Name is : " + getName() }}</p>
 
-<p>My Boolean : {{ myBoolean }}</p>
+  <p>My Boolean : {{ myBoolean }}</p>
 
-<p>{{ "string" }}</p>
+  <p>{{ "string" }}</p>
 
-<h4 [ngClass]="{ 'bg-blue': myBoolean }">Properety Binding [property]</h4>
+  <h4 [ngClass]="{ 'bg-blue': myBoolean }">Properety Binding [property]</h4>
 
-<p [id]="1 + 1" [textContent]="'My Name is ' + getName()"></p>
+  <p [id]="1 + 1" [textContent]="'My Name is ' + getName()"></p>
 
-<p [innerHtml]="'My Boolean is : ' + myBoolean"></p>
+  <p [innerHtml]="'My Boolean is : ' + myBoolean"></p>
 
-<h4 [ngStyle]="{ 'background-color': 'blue', color: 'white' }">
-  Event Binding (event)
-</h4>
+  <h4 [ngStyle]="{ 'background-color': 'blue', color: 'white' }">
+    Event Binding (event)
+  </h4>
 
-<button type="button" (click)="onButtonClick($event)">Click me</button>
+  <button type="button" (click)="onButtonClick($event)">Click me</button>
 
-<button type="button" [disabled]="myBoolean">Changes</button>
+  <button type="button" [disabled]="myBoolean">Changes</button>
 
-<!-- bindings -->
+  <!-- bindings -->
 
-<div *ngIf="">
-  <h1>Ng If Example</h1>
+  <div *ngIf="">
+    <h1>Ng If Example</h1>
+  </div>
+
+  <div *ngIf="'text'">
+    <p *ngFor="let i of numbers">{{ i }}</p>
+  </div>
+
+  <form>
+    <div>
+      <h2>Form</h2>
+    </div>
+    <div>
+      <label> Name : </label>
+      <input type="text" name="nyName" [(ngModel)]="name" />
+    </div>
+    <div>
+      <button type="button" (click)="updateText()">update text</button>
+    </div>
+
+    <div>Name value : {{ name }}</div>
+  </form>
 </div>
 
-
-
-<div *ngIf="'text'">
-  <p *ngFor="let i of numbers">{{ i }}</p>
+<div>
+  <p>Child</p>
+  <p>{{ productObj.name }}</p>
+  <p>{{ productObj.description }}</p>
 </div>
 
-<form>
-  <div>
-    <h2>Form</h2>
-  </div>
-  <div>
-    <label> Name : </label>
-    <input type="text" name="nyName" [(ngModel)]="name" />
-  </div>
-  <div>
-    <button type="button" (click)="updateText()">update text</button>
-  </div>
-
-  <div>Name value : {{ name }}</div>
-</form>
+<div>
+  <button type="button" (click)="emitProduct()">Click me to Emit</button>
+</div>

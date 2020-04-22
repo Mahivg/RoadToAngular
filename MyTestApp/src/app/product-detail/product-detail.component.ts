@@ -1,4 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  Input,
+  EventEmitter,
+  Output,
+} from "@angular/core";
 
 @Component({
   selector: "app-product-detail",
@@ -6,6 +13,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./product-detail.component.css"],
 })
 export class ProductDetailComponent implements OnInit {
+  @Input("productToChild") productObj: any;
+
+  @Output() onProductChanged = new EventEmitter<{
+    name: string;
+    description: string;
+  }>();
+
   name = "Test 1";
 
   tempName: string;
@@ -38,5 +52,15 @@ export class ProductDetailComponent implements OnInit {
 
   updateText() {
     this.name = this.tempName;
+  }
+
+  emitProduct() {
+    const newProduct = {
+      name: "MyTestProduct2",
+      description: "Test description 2",
+    };
+    console.log(newProduct);
+
+    this.onProductChanged.emit(newProduct);
   }
 }

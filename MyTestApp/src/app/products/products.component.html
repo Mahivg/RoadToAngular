@@ -1,1 +1,16 @@
-<p>My Products component works !!</p>
+<p myCustomDirective>My Products component works !!</p>
+
+<div #div1>
+  <p>Parent</p>
+  <p>{{ product.name }}</p>
+  <p>{{ product.description }}</p>
+
+  <button type="button" (click)="productChanged()">Local Ref</button>
+</div>
+
+<form #form1></form>
+
+<app-product-detail
+  [productToChild]="product"
+  (onProductChanged)="productChanged($event)"
+></app-product-detail>

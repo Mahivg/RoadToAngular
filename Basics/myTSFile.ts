@@ -83,12 +83,29 @@ myAny = "myAny";
 
 let myAdd: () => void;
 
-function combine(num1: any, num2: any): number | string | boolean {
+function combine(num1: any, num2: any) {
   if (typeof num1 == "number" && typeof num2 == "number") {
     return num1 + num2;
   } else {
     return num1 + "-" + num2;
   }
+}
+
+interface myObj {
+  name: string;
+}
+
+var datObj: object = {
+  name: "myName",
+};
+
+myAdd = function () {
+  let a = 10;
+
+  return a;
+};
+
+if (true) {
 }
 
 console.log(combine(1, 1));
@@ -99,6 +116,11 @@ console.log(combine("firstName", "lastName1"));
 
 var myBtn = document.getElementById("myBtn")!;
 
+/**
+ * Adding Event listeners
+ */
+
 myBtn.addEventListener("click", function () {
   console.log("clicked");
+  console.log("breakpoint");
 });
