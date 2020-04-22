@@ -1,6 +1,9 @@
-<ht-header> </ht-header>
+<ht-header (onFeatureChange)="featureChanged($event)"> </ht-header>
 <div class="container">
-  <ht-recipes></ht-recipes>
-
-  <ht-shopping-list></ht-shopping-list>
+  <div *ngIf="featureName === 'recipes'">
+    <ht-recipes></ht-recipes>
+  </div>
+  <div *ngIf="featureName === 'shopping'">
+    <ht-shopping-list></ht-shopping-list>
+  </div>
 </div>

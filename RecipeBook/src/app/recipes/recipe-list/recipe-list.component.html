@@ -1,3 +1,19 @@
 <p>recipe-list works!</p>
 
+<div>
+  <div class="card" *ngFor="let recipe of recipes">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-3">
+          <img class="img-fluid" [src]="recipe.imageUrl" alt="" />
+        </div>
+        <div class="col-md-9">
+          <h4>{{ recipe.name }}</h4>
+          <p>{{ recipe.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <ht-recipe-item></ht-recipe-item>

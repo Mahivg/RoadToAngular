@@ -1,1 +1,6 @@
 /Basics/node_modules
+/MyTestApp/node_modules
+/RecipeBook/node_modules
+/MyTestApp/package-lock.json
+/RecipeBook/package-lock.json
+/Basics/package-lock.json

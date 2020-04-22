@@ -5,6 +5,8 @@ import {
   Input,
   EventEmitter,
   Output,
+  OnChanges,
+  SimpleChanges,
 } from "@angular/core";
 
 @Component({
@@ -12,7 +14,7 @@ import {
   templateUrl: "./product-detail.component.html",
   styleUrls: ["./product-detail.component.css"],
 })
-export class ProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnInit, OnChanges {
   @Input("productToChild") productObj: any;
 
   @Output() onProductChanged = new EventEmitter<{
@@ -62,5 +64,9 @@ export class ProductDetailComponent implements OnInit {
     console.log(newProduct);
 
     this.onProductChanged.emit(newProduct);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
   }
 }

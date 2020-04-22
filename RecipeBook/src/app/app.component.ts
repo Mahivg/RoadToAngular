@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'ht-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "ht-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'RecipeBook';
+  title = "RecipeBook";
+  featureName = "recipes";
+
+  featureChanged(eventValue: string) {
+    this.featureName = eventValue;
+  }
 }

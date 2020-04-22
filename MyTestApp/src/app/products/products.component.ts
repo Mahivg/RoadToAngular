@@ -3,6 +3,15 @@ import {
   ViewEncapsulation,
   ElementRef,
   ViewChild,
+  OnInit,
+  OnChanges,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy,
+  SimpleChanges,
 } from "@angular/core";
 import { NgForm } from "@angular/forms";
 
@@ -18,25 +27,62 @@ import { NgForm } from "@angular/forms";
   ],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class ProductsComponent {
+export class ProductsComponent
+  implements
+    OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy {
   product: any;
 
   @ViewChild("div1", { static: true }) div1: ElementRef;
 
   @ViewChild("form1", { static: true }) form1: NgForm;
 
-  constructor() {
-    this.product = { name: "MyTestProduct", description: "Test description" };
-  }
+  constructor() {}
 
   myVal: boolean;
 
   productChanged(event) {
     console.log("parent event");
     console.log(event);
-    // this.product = event;
-    console.log(this.div1);
+    this.product = event;
+  }
 
-    console.log(this.form1);
+  ngOnInit(): void {
+    this.product = { name: "My Product 1", description: "My Test Description" };
+    console.log(" ngOnInit : Called ... ");
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(" ngOnChanges : Called ... ");
+  }
+
+  ngDoCheck(): void {
+    console.log(" ngDoCheck : Called ... ");
+  }
+
+  ngAfterContentInit(): void {
+    console.log(" ngAfterContentInit : Called ... ");
+  }
+
+  ngAfterContentChecked(): void {
+    console.log(" ngAfterContentChecked : Called ... ");
+  }
+
+  ngAfterViewInit(): void {
+    console.log(" ngAfterViewInit : Called ... ");
+  }
+
+  ngAfterViewChecked(): void {
+    console.log(" ngAfterViewChecked : Called ... ");
+  }
+
+  ngOnDestroy(): void {
+    console.log(" ngOnDestory : Called ... ");
   }
 }

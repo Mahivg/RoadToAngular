@@ -5,5 +5,12 @@
 
   <div class="col-md-6">
     <p>shopping-list works!</p>
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of ingredients">
+        <h4>{{ ingredient.name }}</h4>
+        <p>{{ ingredient.quantity }}</p>
+      </li>
+    </ul>
   </div>
 </div>

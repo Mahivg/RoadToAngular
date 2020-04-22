@@ -1,3 +1,13 @@
 <p>App component works !!!</p>
 
-<my-products></my-products>
+<div class="container">
+  <button class="btn btn-primary" (click)="hideMyProducts = !hideMyProducts">
+    Hide My Products
+  </button>
+
+  <my-products *ngIf="hideMyProducts">
+    <div>
+      <h1>I am from App component</h1>
+    </div>
+  </my-products>
+</div>
