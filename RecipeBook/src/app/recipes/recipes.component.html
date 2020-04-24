@@ -1,11 +1,12 @@
-<p>recipes works!</p>
-
 <div class="row">
   <div class="col-md-6">
-    <ht-recipe-list></ht-recipe-list>
+    <ht-recipe-list
+      [recipes]="recipes"
+      (onRecipeChanged)="updateRecipeDetail($event)"
+    ></ht-recipe-list>
   </div>
 
-  <div class="col-md-6">
-    <ht-recipe-detail></ht-recipe-detail>
+  <div class="col-md-6" *ngIf="selectedRecipe">
+    <ht-recipe-detail [selectedRecipe]="selectedRecipe"></ht-recipe-detail>
   </div>
 </div>

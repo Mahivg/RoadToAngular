@@ -1,4 +1,4 @@
-<p myCustomDirective>My Products component works !!</p>
+<p class="customDirP" myCustomDirective>My Products component works !!</p>
 
 <div #div1>
   <p>Parent</p>
@@ -8,7 +8,11 @@
   <button type="button" (click)="productChanged()">Local Ref</button>
 </div>
 
-<form #form1></form>
+<div>
+  <button type="button" (click)="addAndPrintArray()">
+    Add Product and Print
+  </button>
+</div>
 
 <app-product-detail
   [productToChild]="product"

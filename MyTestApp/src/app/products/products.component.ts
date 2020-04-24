@@ -14,6 +14,8 @@ import {
   SimpleChanges,
 } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { ProductsService } from "./products.service";
+import { Product } from "./product";
 
 @Component({
   selector: "my-products",
@@ -23,9 +25,14 @@ import { NgForm } from "@angular/forms";
       p {
         color: red;
       }
+      .customDirP {
+        padding: 20px;
+        margin: 20px;
+      }
     `,
   ],
   encapsulation: ViewEncapsulation.Emulated,
+  providers: [ProductsService],
 })
 export class ProductsComponent
   implements
@@ -43,9 +50,13 @@ export class ProductsComponent
 
   @ViewChild("form1", { static: true }) form1: NgForm;
 
-  constructor() {}
+  constructor(private productService: ProductsService) {}
 
   myVal: boolean;
+
+  //productService: ProductsService;
+
+  products: Product[];
 
   productChanged(event) {
     console.log("parent event");
@@ -55,34 +66,44 @@ export class ProductsComponent
 
   ngOnInit(): void {
     this.product = { name: "My Product 1", description: "My Test Description" };
-    console.log(" ngOnInit : Called ... ");
+    // console.log(" ngOnInit : Called ... ");
+    //this.productService = new ProductsService();
+    this.products = this.productService.getProducts();
+    console.log(this.products);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(" ngOnChanges : Called ... ");
+    // console.log(" ngOnChanges : Called ... ");
   }
 
   ngDoCheck(): void {
-    console.log(" ngDoCheck : Called ... ");
+    // console.log(" ngDoCheck : Called ... ");
   }
 
   ngAfterContentInit(): void {
-    console.log(" ngAfterContentInit : Called ... ");
+    // console.log(" ngAfterContentInit : Called ... ");
   }
 
   ngAfterContentChecked(): void {
-    console.log(" ngAfterContentChecked : Called ... ");
+    // console.log(" ngAfterContentChecked : Called ... ");
   }
 
   ngAfterViewInit(): void {
-    console.log(" ngAfterViewInit : Called ... ");
+    // console.log(" ngAfterViewInit : Called ... ");
   }
 
   ngAfterViewChecked(): void {
-    console.log(" ngAfterViewChecked : Called ... ");
+    // console.log(" ngAfterViewChecked : Called ... ");
   }
 
   ngOnDestroy(): void {
-    console.log(" ngOnDestory : Called ... ");
+    // console.log(" ngOnDestory : Called ... ");
+  }
+
+  addAndPrintArray() {
+    const prod = new Product(6, "grape", 10, new Date(), true);
+    this.productService.addProduct(prod);
+    this.products = this.productService.getProducts();
+    console.log(this.products);
   }
 }

@@ -8,6 +8,8 @@ import {
   OnChanges,
   SimpleChanges,
 } from "@angular/core";
+import { Product } from "../products/product";
+import { ProductsService } from "../products/products.service";
 
 @Component({
   selector: "app-product-detail",
@@ -22,6 +24,8 @@ export class ProductDetailComponent implements OnInit, OnChanges {
     description: string;
   }>();
 
+  testElseBlock = true;
+
   name = "Test 1";
 
   tempName: string;
@@ -34,6 +38,10 @@ export class ProductDetailComponent implements OnInit, OnChanges {
 
   myObj = { name: "myName" };
 
+  //productService: ProductsService;
+
+  products: Product[];
+
   getName() {
     return this.name;
   }
@@ -43,9 +51,17 @@ export class ProductDetailComponent implements OnInit, OnChanges {
     console.log(event);
     this.myBoolean = !this.myBoolean;
   }
-  constructor() {}
+  constructor(private productService: ProductsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    //this.productService = new ProductsService();
+    this.products = this.productService.getProducts();
+  }
+
+  printProducts() {
+    this.products = this.productService.getProducts();
+    console.log(this.products);
+  }
 
   onInputChange(event) {
     console.log(event);
@@ -57,13 +73,14 @@ export class ProductDetailComponent implements OnInit, OnChanges {
   }
 
   emitProduct() {
-    const newProduct = {
-      name: "MyTestProduct2",
-      description: "Test description 2",
-    };
-    console.log(newProduct);
+    // const newProduct = {
+    //   name: "MyTestProduct2",
+    //   description: "Test description 2",
+    // };
+    // console.log(newProduct);
 
-    this.onProductChanged.emit(newProduct);
+    // this.onProductChanged.emit(newProduct);
+    this.testElseBlock = !this.testElseBlock;
   }
 
   ngOnChanges(changes: SimpleChanges) {

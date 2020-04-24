@@ -6,6 +6,8 @@ import { AppComponent } from "./app.component";
 import { ProductsComponent } from "./products/products.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { MyCustomDirective } from "./my-custom.directive";
+import { MyLoopDirective } from "./my-loop.directive";
+import { ProductsService } from "./products/products.service";
 
 @NgModule({
   declarations: [
@@ -13,9 +15,10 @@ import { MyCustomDirective } from "./my-custom.directive";
     ProductsComponent,
     ProductDetailComponent,
     MyCustomDirective,
+    MyLoopDirective,
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [ProductsService], // { provide : ProductsService, useClass: ProductsService }
   bootstrap: [AppComponent],
 })
 export class AppModule {}

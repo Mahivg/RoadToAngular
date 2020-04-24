@@ -1,15 +1,12 @@
-<p>recipe-detail works!</p>
-
+<h2>Recipe Detail</h2>
+<hr />
 <div>
   <div>
-    <img
-      src="https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/caponata-pasta_1.jpg"
-      alt=""
-    />
+    <img src="{{ recipe.imageUrl }}" alt="" />
   </div>
 
   <div>
-    <h4>Test Name</h4>
-    <p>Test Description</p>
+    <h4>{{ recipe.name }}</h4>
+    <p>{{ recipe.description }}</p>
   </div>
 </div>

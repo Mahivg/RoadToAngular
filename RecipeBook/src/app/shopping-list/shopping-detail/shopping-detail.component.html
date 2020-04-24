@@ -1,15 +1,20 @@
-<p>shopping-detail works!</p>
+<h2>Add Ingredient</h2>
+<hr />
 <div>
   <div class="form-group">
     <label for="name"> Name </label>
-    <input type=" text" class="form-control" />
+    <input type=" text" class="form-control" #txtName />
   </div>
   <div class="form-group">
     <label for="name"> Quantity </label>
-    <input type="number" class="form-control" />
+    <input type="number" class="form-control" #txtQuantity />
   </div>
   <div class="form-group">
-    <button type="button" class="btn btn-primary m-2">Add</button>
-    <button type="button" class="btn btn-danger m-2">Cancel</button>
+    <button type="button" class="btn btn-primary m-2" (click)="addIngredient()">
+      Add
+    </button>
+    <button type="button" class="btn btn-danger m-2" (click)="cancelEdit()">
+      Cancel
+    </button>
   </div>
 </div>

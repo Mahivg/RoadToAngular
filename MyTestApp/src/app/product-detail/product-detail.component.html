@@ -51,11 +51,22 @@
 </div>
 
 <div>
-  <p>Child</p>
+  <button type="button" (click)="printProducts()" class="btn btn-primary">
+    Print Products
+  </button>
+
+  <p *myLoop>Child</p>
   <p>{{ productObj.name }}</p>
   <p>{{ productObj.description }}</p>
 </div>
 
 <div>
   <button type="button" (click)="emitProduct()">Click me to Emit</button>
+</div>
+
+<div *ngIf="testElseBlock">
+  <h2>NG IF True</h2>
+</div>
+<div *ngIf="!testElseBlock">
+  <h2>NG IF False</h2>
 </div>
