@@ -16,6 +16,9 @@ import {
 import { NgForm } from "@angular/forms";
 import { ProductsService } from "./products.service";
 import { Product } from "./product";
+import { Observable, interval, throwError, Subject } from "rxjs";
+import { map, filter } from "rxjs/operators";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "my-products",
@@ -50,7 +53,12 @@ export class ProductsComponent
 
   @ViewChild("form1", { static: true }) form1: NgForm;
 
-  constructor(private productService: ProductsService) {}
+  @ViewChild("txtProductId", { static: true }) txtProductId: ElementRef;
+
+  constructor(
+    private productService: ProductsService,
+    private router: Router
+  ) {}
 
   myVal: boolean;
 
@@ -63,13 +71,53 @@ export class ProductsComponent
     console.log(event);
     this.product = event;
   }
+  sub: any;
+
+  subscription: any;
+
+  onRecipeChangedSubject = new Subject<string>();
 
   ngOnInit(): void {
     this.product = { name: "My Product 1", description: "My Test Description" };
     // console.log(" ngOnInit : Called ... ");
     //this.productService = new ProductsService();
     this.products = this.productService.getProducts();
-    console.log(this.products);
+    // console.log(this.products);
+    // Observable.create(observer => {
+    //   observer.next('string');
+    //   Observable.throw(new Error());
+    //   observer.complete();
+    // })
+
+    // interval(1000).subscribe((data) => {
+    //   console.log(data);
+    // });
+
+    this.sub = Observable.create((observer) => {
+      let counter = 0;
+      setInterval(() => {
+        observer.next(counter);
+        counter++;
+        if (counter == 5) {
+          observer.error("limit Exceeded");
+        }
+        if (counter == 4) {
+          observer.complete();
+        }
+      }, 1000);
+    });
+
+    this.subscription = this.sub.subscribe(
+      (data) => {
+        console.log(data);
+      },
+      (err) => {
+        console.log(err);
+      },
+      () => {
+        console.log("Job completed");
+      }
+    );
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -98,6 +146,7 @@ export class ProductsComponent
 
   ngOnDestroy(): void {
     // console.log(" ngOnDestory : Called ... ");
+    this.subscription.unsubscribe();
   }
 
   addAndPrintArray() {
@@ -105,5 +154,12 @@ export class ProductsComponent
     this.productService.addProduct(prod);
     this.products = this.productService.getProducts();
     console.log(this.products);
+  }
+
+  goToProductDetailPage() {
+    let id = this.txtProductId.nativeElement.value;
+    this.router.navigate(["products", id], {
+      queryParams: { id: 19, name: "prod" },
+    });
   }
 }

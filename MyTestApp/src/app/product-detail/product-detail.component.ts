@@ -10,14 +10,16 @@ import {
 } from "@angular/core";
 import { Product } from "../products/product";
 import { ProductsService } from "../products/products.service";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "app-product-detail",
   templateUrl: "./product-detail.component.html",
   styleUrls: ["./product-detail.component.css"],
+  providers: [ProductsService],
 })
 export class ProductDetailComponent implements OnInit, OnChanges {
-  @Input("productToChild") productObj: any;
+  productObj: any;
 
   @Output() onProductChanged = new EventEmitter<{
     name: string;
@@ -46,16 +48,35 @@ export class ProductDetailComponent implements OnInit, OnChanges {
     return this.name;
   }
 
+  constructor(
+    private productService: ProductsService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
   onButtonClick(event) {
     console.log("Button Clicked");
     console.log(event);
     this.myBoolean = !this.myBoolean;
   }
-  constructor(private productService: ProductsService) {}
 
   ngOnInit() {
     //this.productService = new ProductsService();
     this.products = this.productService.getProducts();
+    this.productObj = new Product(1, "Test", 100, new Date(), true);
+
+    let id = this.route.snapshot.params["id"];
+    let sub = this.route.params.subscribe((params) => {
+      let id = params["id"];
+      console.log(`id = ${id}`);
+    });
+
+    this.route.queryParams.subscribe((qParams) => {
+      let id = qParams["id"];
+      let name = qParams["name"];
+
+      console.log(id + "  " + name);
+    });
   }
 
   printProducts() {
@@ -85,5 +106,9 @@ export class ProductDetailComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
+  }
+
+  reload() {
+    this.router.navigate(["/products", 230]);
   }
 }

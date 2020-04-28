@@ -1,13 +1,6 @@
-<p>App component works !!!</p>
+<app-header></app-header>
 
-<div class="container">
-  <button class="btn btn-primary" (click)="hideMyProducts = !hideMyProducts">
-    Hide My Products
-  </button>
-
-  <my-products *ngIf="hideMyProducts">
-    <div>
-      <h1>I am from App component</h1>
-    </div>
-  </my-products>
+<div class="container m-3">
+  <router-outlet></router-outlet>
+  <!-- Place holder -->
 </div>

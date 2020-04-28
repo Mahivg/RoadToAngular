@@ -1,10 +1,6 @@
 <div>
   <h2>Recipes</h2>
   <hr />
-  <ht-recipe-item
-    *ngFor="let recipe of recipes"
-    [recipeItem]="recipe"
-    (onRecipeItemSelected)="onRecipeSelected($event)"
-  >
+  <ht-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe">
   </ht-recipe-item>
 </div>
