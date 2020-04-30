@@ -21,6 +21,8 @@ import { ActivatedRoute, Router } from "@angular/router";
 export class ProductDetailComponent implements OnInit, OnChanges {
   productObj: any;
 
+  product: Product;
+
   @Output() onProductChanged = new EventEmitter<{
     name: string;
     description: string;
@@ -68,6 +70,7 @@ export class ProductDetailComponent implements OnInit, OnChanges {
     let id = this.route.snapshot.params["id"];
     let sub = this.route.params.subscribe((params) => {
       let id = params["id"];
+      this.product = this.productService.getProductById(id);
       console.log(`id = ${id}`);
     });
 

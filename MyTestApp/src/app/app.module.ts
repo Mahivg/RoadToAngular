@@ -12,13 +12,8 @@ import { HeaderComponent } from "./header/header.component";
 import { UsersComponent } from "./users/users.component";
 import { UserDetailComponent } from "./users/user-detail/user-detail.component";
 import { Routes, RouterModule } from "@angular/router";
-
-const routes: Routes = [
-  { path: "products", component: ProductsComponent },
-  { path: "products/:id", component: ProductDetailComponent }, // { id : }
-  { path: "users", component: UsersComponent },
-  { path: "users/:id", component: UserDetailComponent },
-];
+import { NotFoundComponent } from "./not-found/not-found.component";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -30,8 +25,9 @@ const routes: Routes = [
     HeaderComponent,
     UsersComponent,
     UserDetailComponent,
+    NotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [ProductsService], // { provide : ProductsService, useClass: ProductsService }
   bootstrap: [AppComponent],
 })

@@ -6,7 +6,7 @@ export class ProductsService {
   constructor() {
     this.products = [
       new Product(1, "Apple", 10, new Date(), true),
-      new Product(2, "Orangee", 10, new Date(), true),
+      new Product(2, "Orange", 10, new Date(), true),
       new Product(3, "Pinapple", 10, new Date(), true),
       new Product(4, "Mango", 10, new Date(), true),
     ];
@@ -17,7 +17,7 @@ export class ProductsService {
   }
 
   getProductById(id: number): Product {
-    return this.products.filter((p) => p.id === id)[0];
+    return this.products.filter((p) => p.id == id)[0];
   }
 
   addProduct(product: Product) {

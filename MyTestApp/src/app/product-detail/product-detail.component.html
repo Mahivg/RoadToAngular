@@ -48,30 +48,45 @@
 
     <div>Name value : {{ name }}</div>
   </form>
+
+  <div>
+    <button type="button" (click)="printProducts()" class="btn btn-primary">
+      Print Products
+    </button>
+
+    <p *myLoop>Child</p>
+    <p>{{ productObj.name }}</p>
+    <p>{{ productObj.price }}</p>
+  </div>
+
+  <div>
+    <button type="button" (click)="emitProduct()">Click me to Emit</button>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-success m-2" (click)="reload()">
+      Reload
+    </button>
+  </div>
+  <div *ngIf="testElseBlock">
+    <h2>NG IF True</h2>
+  </div>
+  <div *ngIf="!testElseBlock">
+    <h2>NG IF False</h2>
+  </div>
 </div>
 
 <div>
-  <button type="button" (click)="printProducts()" class="btn btn-primary">
-    Print Products
-  </button>
+  <h4>Product Details</h4>
 
-  <p *myLoop>Child</p>
-  <p>{{ productObj.name }}</p>
-  <p>{{ productObj.price }}</p>
-</div>
+  <div>
+    <h1>{{ product.name }}</h1>
+    <h3>{{ product.price }}</h3>
+    <p>EXP Date: {{ product.expireDate }}</p>
+    <p>Active : {{ product.active ? "YES" : "NO" }}</p>
+  </div>
 
-<div>
-  <button type="button" (click)="emitProduct()">Click me to Emit</button>
-</div>
-
-<div>
-  <button type="button" class="btn btn-success m-2" (click)="reload()">
-    Reload
-  </button>
-</div>
-<div *ngIf="testElseBlock">
-  <h2>NG IF True</h2>
-</div>
-<div *ngIf="!testElseBlock">
-  <h2>NG IF False</h2>
+  <div>
+    <a class="btn btn-primary m-2" routerLink="/users"> GotoUsers </a>
+  </div>
 </div>

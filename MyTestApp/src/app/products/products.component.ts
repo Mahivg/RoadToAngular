@@ -32,6 +32,9 @@ import { Router } from "@angular/router";
         padding: 20px;
         margin: 20px;
       }
+      .card {
+        cursor: pointer;
+      }
     `,
   ],
   encapsulation: ViewEncapsulation.Emulated,
@@ -161,5 +164,10 @@ export class ProductsComponent
     this.router.navigate(["products", id], {
       queryParams: { id: 19, name: "prod" },
     });
+  }
+
+  onProductSelect(id: number) {
+    console.log(id);
+    this.router.navigate(["products", id, "view"]);
   }
 }
