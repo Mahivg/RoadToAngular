@@ -1,9 +1,11 @@
-<ht-header (onFeatureChange)="featureChanged($event)"> </ht-header>
+<!-- <ht-header (onFeatureChange)="featureChanged($event)"> </ht-header> -->
+<ht-header> </ht-header>
 <div class="container">
-  <div *ngIf="featureName === 'recipes'">
+  <!-- <div *ngIf="featureName === 'recipes'">
     <ht-recipes></ht-recipes>
   </div>
   <div *ngIf="featureName === 'shopping'">
     <ht-shopping-list></ht-shopping-list>
-  </div>
+  </div> -->
+  <router-outlet></router-outlet>
 </div>

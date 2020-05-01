@@ -14,6 +14,7 @@ import { UserDetailComponent } from "./users/user-detail/user-detail.component";
 import { Routes, RouterModule } from "@angular/router";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AppRoutingModule } from "./app-routing.module";
     UsersComponent,
     UserDetailComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [ProductsService], // { provide : ProductsService, useClass: ProductsService }

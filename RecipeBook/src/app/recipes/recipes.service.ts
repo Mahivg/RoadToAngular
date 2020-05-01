@@ -8,11 +8,13 @@ import { Subject } from "rxjs";
 export class RecipeService {
   recipes = [
     new Recipe(
+      1,
       "Test 1",
       "Test Description 1",
       "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/caponata-pasta_1.jpg"
     ),
     new Recipe(
+      2,
       "Test 2",
       "Test Description 2",
       "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/caponata-pasta_1.jpg"
@@ -23,6 +25,10 @@ export class RecipeService {
 
   getRecipes(): Recipe[] {
     return this.recipes;
+  }
+
+  getRecipeById(rId: number) {
+    return this.recipes.filter((r) => r.id === rId)[0];
   }
 
   getRecipeByName(rName: string) {

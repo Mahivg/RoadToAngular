@@ -9,7 +9,7 @@ export class AppComponent {
   title = "RecipeBook";
   featureName = "recipes";
 
-  featureChanged(eventValue: string) {
-    this.featureName = eventValue;
-  }
+  // featureChanged(eventValue: string) {
+  //   this.featureName = eventValue;
+  // }
 }

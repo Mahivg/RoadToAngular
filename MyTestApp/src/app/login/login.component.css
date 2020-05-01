@@ -1,0 +1,54 @@
+.container {
+  background-color: indigo;
+}
+
+.login-box {
+  width: 100%;
+  height: 100%;
+  background-color: indigo;
+  padding: 0;
+  margin: 0;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+  box-shadow: 25px 20px 20px -25px #9d9b9b;
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  padding: 30px;
+}
+
+.login-container h2 {
+  text-align: center;
+  font-size: 24px;
+  padding: 10px 0;
+  margin-bottom: 35px;
+}
+
+.text-box {
+  padding: 8px 10px;
+  margin-bottom: 45px;
+  border-bottom: 4px solid green;
+}
+
+.text-box input {
+  outline: none;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.btn-container {
+  padding: 1px;
+  position: relative;
+}
+
+.my-btn {
+  width: 100%;
+  margin-top: 40px;
+}
