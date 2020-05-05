@@ -1,18 +1,107 @@
 <div class="login-box">
   <div class="login-container">
     <h2>Login</h2>
-    <div class="text-box">
-      <input type="text" placeholder="UserName" #txtUserName />
-    </div>
+    <!-- TD Forms -->
+    <!--
+    <form #loginForm="ngForm" (ngSubmit)="onFormSubmit(loginForm)">
+      <div class="text-box">
+        <input
+          name="userName"
+          type="email"
+          placeholder="UserName"
+          #txtUserName="ngModel"
+          ngModel
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          required
+        />
+      </div>
 
-    <div class="text-box">
-      <input type="password" placeholder="Password" #txtPassword />
-    </div>
+      <div *ngIf="loginForm.submitted && txtUserName.errors">
+        <p class="text-danger" *ngIf="txtUserName.errors.pattern">
+          Invalid Email pattern
+        </p>
+      </div>
 
-    <div class="btn-container">
-      <button type="button" class="btn btn-primary my-btn" (click)="login()">
-        Login
-      </button>
-    </div>
+      <div class="text-box">
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          #txtPassword="ngModel"
+          ngModel
+          required
+          minlength="6"
+        />
+      </div>
+
+      <div *ngIf="loginForm.submitted && txtPassword.errors">
+        <p *ngIf="txtPassword.errors.required" class="text-danger">
+          Password is required !!!
+        </p>
+        <p *ngIf="txtPassword.errors.minlength" class="text-danger">
+          Minlength invalid!!!
+        </p>
+      </div>
+
+      <div class="btn-container">
+        <button type="submit" class="btn btn-primary my-btn">
+          Login
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger my-btn"
+          (click)="resetForm()"
+        >
+          Reset
+        </button>
+      </div>
+    </form>
+    -->
+
+    <!-- Reactive Forms -->
+
+    <form #loginForm="ngForm" (ngSubmit)="login()" [formGroup]="loginFG">
+      <div class="text-box">
+        <input
+          name="userName"
+          type="email"
+          placeholder="UserName"
+          formControlName="userName"
+        />
+      </div>
+
+      <div class="text-box">
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+      <div *ngIf="loginForm.submitted && fgc.password.errors">
+        <p *ngIf="fgc['password'].errors.required" class="text-danger">
+          Password is required !!!
+        </p>
+        <p
+          *ngIf="loginFG.controls['password'].errors.minlength"
+          class="text-danger"
+        >
+          Minlength invalid!!!
+        </p>
+      </div>
+
+      <div class="btn-container">
+        <button type="submit" class="btn btn-primary my-btn">
+          Login
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger my-btn"
+          (click)="resetForm()"
+        >
+          Reset
+        </button>
+      </div>
+    </form>
   </div>
 </div>

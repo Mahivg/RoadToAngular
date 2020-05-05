@@ -10,6 +10,7 @@ import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item/recipe-item.component";
 import { ShoppingDetailComponent } from "./shopping-list/shopping-detail/shopping-detail.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { AppRoutingModule } from "./app-routing.module";
     RecipeItemComponent,
     ShoppingDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

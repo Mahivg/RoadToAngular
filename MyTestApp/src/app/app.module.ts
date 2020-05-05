@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
@@ -14,7 +14,9 @@ import { UserDetailComponent } from "./users/user-detail/user-detail.component";
 import { Routes, RouterModule } from "@angular/router";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from "./login/login.component";
+import { LimitToPipe } from "./limitTo.pipe";
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { LoginComponent } from './login/login.component';
     UserDetailComponent,
     NotFoundComponent,
     LoginComponent,
+    LimitToPipe,
+    FilterPipe,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   providers: [ProductsService], // { provide : ProductsService, useClass: ProductsService }
   bootstrap: [AppComponent],
 })

@@ -80,6 +80,8 @@ export class ProductsComponent
 
   onRecipeChangedSubject = new Subject<string>();
 
+  searchText: string = "";
+
   ngOnInit(): void {
     this.product = { name: "My Product 1", description: "My Test Description" };
     // console.log(" ngOnInit : Called ... ");

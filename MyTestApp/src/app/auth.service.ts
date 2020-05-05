@@ -8,11 +8,11 @@ export class AuthService {
 
   users = [
     {
-      uName: "Test1",
+      uName: "Test1@gmail.com",
       password: "test@123",
     },
     {
-      uName: "Test2",
+      uName: "Test2@gmail.com",
       password: "test@123",
     },
   ];

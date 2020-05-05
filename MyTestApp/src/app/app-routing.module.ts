@@ -16,8 +16,8 @@ const routes: Routes = [
   {
     path: "products",
     component: ProductsComponent,
-    canActivate: [AuthGaurd],
-    canActivateChild: [AuthGaurd],
+    // canActivate: [AuthGaurd],
+    // canActivateChild: [AuthGaurd],
     children: [{ path: ":id/view", component: ProductDetailComponent }],
   },
   // { path: "products/:id", component: ProductDetailComponent }, // { id : }

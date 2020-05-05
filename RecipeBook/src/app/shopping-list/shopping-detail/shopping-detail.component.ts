@@ -7,6 +7,12 @@ import {
   Output,
 } from "@angular/core";
 import { Ingredient } from "src/app/model/ingredient";
+import {
+  FormGroup,
+  FormBuilder,
+  FormControl,
+  Validators,
+} from "@angular/forms";
 
 @Component({
   selector: "ht-shopping-detail",
@@ -14,28 +20,32 @@ import { Ingredient } from "src/app/model/ingredient";
   styleUrls: ["./shopping-detail.component.css"],
 })
 export class ShoppingDetailComponent implements OnInit {
-  @ViewChild("txtName", { static: true }) txtNameInput: ElementRef;
-  @ViewChild("txtQuantity", { static: true }) txtQuantityInput: ElementRef;
+  // @ViewChild("txtName", { static: true }) txtNameInput: ElementRef;
+  // @ViewChild("txtQuantity", { static: true }) txtQuantityInput: ElementRef;
 
   @Output() onAddIngredient = new EventEmitter<Ingredient>();
 
-  constructor() {}
+  addIngredientFG: FormGroup;
 
-  ngOnInit() {}
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.addIngredientFG = this.fb.group({
+      name: this.fb.control("", [Validators.required]),
+      quantity: this.fb.control("", [Validators.required, Validators.min(1)]),
+    });
+  }
 
   addIngredient() {
-    const iName = this.txtNameInput.nativeElement.value;
-    const iQuantity = this.txtQuantityInput.nativeElement.value;
-
-    if (iName && iQuantity) {
-      const newIngredient = new Ingredient(iName, iQuantity);
-
+    if (this.addIngredientFG.valid) {
+      let newIngredient = this.addIngredientFG.value;
       this.onAddIngredient.emit(newIngredient);
+    } else {
+      alert("Invalid Inputs!!");
     }
   }
 
   cancelEdit() {
-    this.txtNameInput.nativeElement.value = "";
-    this.txtQuantityInput.nativeElement.value = "";
+    this.addIngredientFG.reset();
   }
 }
