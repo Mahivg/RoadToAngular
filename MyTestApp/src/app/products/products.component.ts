@@ -19,6 +19,8 @@ import { Product } from "./product";
 import { Observable, interval, throwError, Subject } from "rxjs";
 import { map, filter } from "rxjs/operators";
 import { Router } from "@angular/router";
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
+import { UserResponse } from "../UserResponse";
 
 @Component({
   selector: "my-products",
@@ -51,6 +53,10 @@ export class ProductsComponent
     AfterViewChecked,
     OnDestroy {
   product: any;
+
+  users: UserResponse[];
+
+  user: UserResponse;
 
   @ViewChild("div1", { static: true }) div1: ElementRef;
 
@@ -171,5 +177,16 @@ export class ProductsComponent
   onProductSelect(id: number) {
     console.log(id);
     this.router.navigate(["products", id, "view"]);
+  }
+
+  getUsers() {
+    this.productService.getUsers().subscribe((res) => {
+      this.users = res;
+      this.user = this.users[1];
+    });
+  }
+
+  postUser() {
+    this.productService.postUser(this.user).subscribe((res) => console.log);
   }
 }

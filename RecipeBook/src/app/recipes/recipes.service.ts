@@ -34,4 +34,15 @@ export class RecipeService {
   getRecipeByName(rName: string) {
     return this.recipes.filter((r) => r.name === rName)[0];
   }
+
+  updateRecipeById(rId: number, recipe: Recipe) {
+    let index = this.recipes.findIndex((r) => r.id == rId);
+    if (index !== -1) {
+      this.recipes[index] = recipe;
+    }
+  }
+
+  addRecipes(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
 }

@@ -16,7 +16,9 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./login/login.component";
 import { LimitToPipe } from "./limitTo.pipe";
-import { FilterPipe } from './filter.pipe';
+import { FilterPipe } from "./filter.pipe";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { AuthInterceptor } from "./AuthInterceptor";
 
 @NgModule({
   declarations: [
@@ -33,8 +35,17 @@ import { FilterPipe } from './filter.pipe';
     LimitToPipe,
     FilterPipe,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
-  providers: [ProductsService], // { provide : ProductsService, useClass: ProductsService }
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
+  providers: [
+    ProductsService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ], // { provide : ProductsService, useClass: ProductsService }
   bootstrap: [AppComponent],
 })
 export class AppModule {}

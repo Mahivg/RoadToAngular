@@ -1,9 +1,11 @@
 import { Product } from "./product";
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
+import { UserResponse } from "../UserResponse";
 
 export class ProductsService {
   products: Product[];
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
     this.products = [
       new Product(1, "Apple", 10, new Date(), true),
       new Product(2, "Orange", 10, new Date(), true),
@@ -22,5 +24,30 @@ export class ProductsService {
 
   addProduct(product: Product) {
     this.products.push(product);
+  }
+
+  getUsers() {
+    const userURL = "https://jsonplaceholder.typicode.com/users";
+
+    return this.httpClient.get<UserResponse[]>(userURL, {
+      params: new HttpParams().set("active", "value"),
+    });
+  }
+
+  postUser(user: UserResponse) {
+    const addUserURL =
+      "https://mytestapplication-f1239.firebaseio.com/mytestapplication-f1239.json";
+
+    return this.httpClient.post(addUserURL, user);
+  }
+
+  putUser(user: UserResponse) {
+    const putURL = "https://jsonplaceholder.typicode.com/users/1";
+  }
+
+  deleteUser() {
+    this.httpClient
+      .delete("https://jsonplaceholder.typicode.com/users/1")
+      .subscribe((res) => console.log);
   }
 }
