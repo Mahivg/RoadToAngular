@@ -1,6 +1,7 @@
-import { Product } from "./product";
+import { Product } from "../model/product";
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
-import { UserResponse } from "../UserResponse";
+import { UserResponse } from "../model/UserResponse";
+import { identifierModuleUrl } from "@angular/compiler";
 
 export class ProductsService {
   products: Product[];
@@ -43,9 +44,16 @@ export class ProductsService {
 
   putUser(user: UserResponse) {
     const putURL = "https://jsonplaceholder.typicode.com/users/1";
+    return this.httpClient.put(putURL, user);
   }
 
   deleteUser() {
+    // Soft delete and Hard delete,
+    // user,, product, active
+
+    // users => active == true => user  id =1  active/false
+    //
+
     this.httpClient
       .delete("https://jsonplaceholder.typicode.com/users/1")
       .subscribe((res) => console.log);

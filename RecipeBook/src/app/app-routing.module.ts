@@ -6,13 +6,13 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 
 const routes: Routes = [
   {
-    path: "recipes",
-    component: RecipesComponent,
-    children: [{ path: ":id", component: RecipeDetailComponent }],
-  },
-  {
     path: "shopping",
     component: ShoppingListComponent,
+  },
+  {
+    path: "recipes",
+    loadChildren: () =>
+      import("./recipes/recipes.module").then((m) => m.RecipeModule),
   },
   {
     path: "",

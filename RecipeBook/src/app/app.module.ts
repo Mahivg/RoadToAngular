@@ -11,19 +11,22 @@ import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingDetailComponent } from "./shopping-list/shopping-detail/shopping-detail.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RecipeModule } from "./recipes/recipes.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent,
     ShoppingListComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
     ShoppingDetailComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RecipeModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

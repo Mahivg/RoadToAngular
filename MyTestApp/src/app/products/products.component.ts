@@ -15,12 +15,12 @@ import {
 } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { ProductsService } from "./products.service";
-import { Product } from "./product";
+import { Product } from "../model/product";
 import { Observable, interval, throwError, Subject } from "rxjs";
 import { map, filter } from "rxjs/operators";
 import { Router } from "@angular/router";
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
-import { UserResponse } from "../UserResponse";
+import { UserResponse } from "../model/UserResponse";
 
 @Component({
   selector: "my-products",

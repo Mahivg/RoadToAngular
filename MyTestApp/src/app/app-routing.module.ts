@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { ProductsComponent } from "./products/products.component";
-import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { ProductDetailComponent } from "./products/product-detail/product-detail.component";
 import { UsersComponent } from "./users/users.component";
 import { UserDetailComponent } from "./users/user-detail/user-detail.component";
-import { NotFoundComponent } from "./not-found/not-found.component";
+import { NotFoundComponent } from "./shared/components/not-found/not-found.component";
 import { LoginComponent } from "./login/login.component";
-import { AuthGaurd } from "./auth.gaurd";
+import { AuthGaurd } from "./shared/services/auth.gaurd";
 
 const routes: Routes = [
   {
@@ -15,10 +15,8 @@ const routes: Routes = [
   },
   {
     path: "products",
-    component: ProductsComponent,
-    // canActivate: [AuthGaurd],
-    // canActivateChild: [AuthGaurd],
-    children: [{ path: ":id/view", component: ProductDetailComponent }],
+    loadChildren: () =>
+      import("./products/products.module").then((m) => m.ProductsModule),
   },
   // { path: "products/:id", component: ProductDetailComponent }, // { id : }
   { path: "users", component: UsersComponent },

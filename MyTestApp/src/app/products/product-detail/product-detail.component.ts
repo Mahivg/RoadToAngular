@@ -8,8 +8,8 @@ import {
   OnChanges,
   SimpleChanges,
 } from "@angular/core";
-import { Product } from "../products/product";
-import { ProductsService } from "../products/products.service";
+import { Product } from "../../model/product";
+import { ProductsService } from "../products.service";
 import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({

@@ -4,27 +4,26 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { ProductsComponent } from "./products/products.component";
-import { ProductDetailComponent } from "./product-detail/product-detail.component";
-import { MyCustomDirective } from "./my-custom.directive";
-import { MyLoopDirective } from "./my-loop.directive";
+import { ProductDetailComponent } from "./products/product-detail/product-detail.component";
+import { MyCustomDirective } from "./shared/directive/my-custom.directive";
+import { MyLoopDirective } from "./shared/directive/my-loop.directive";
 import { ProductsService } from "./products/products.service";
-import { HeaderComponent } from "./header/header.component";
+import { HeaderComponent } from "./shared/components/header/header.component";
 import { UsersComponent } from "./users/users.component";
 import { UserDetailComponent } from "./users/user-detail/user-detail.component";
 import { Routes, RouterModule } from "@angular/router";
-import { NotFoundComponent } from "./not-found/not-found.component";
+import { NotFoundComponent } from "./shared/components/not-found/not-found.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./login/login.component";
-import { LimitToPipe } from "./limitTo.pipe";
-import { FilterPipe } from "./filter.pipe";
+import { LimitToPipe } from "./shared/pipes/limitTo.pipe";
+import { FilterPipe } from "./shared/pipes/filter.pipe";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { AuthInterceptor } from "./AuthInterceptor";
+import { AuthInterceptor } from "./shared/interceptors/AuthInterceptor";
+import { ProductsModule } from "./products/products.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent,
-    ProductDetailComponent,
     MyCustomDirective,
     MyLoopDirective,
     HeaderComponent,
@@ -32,8 +31,6 @@ import { AuthInterceptor } from "./AuthInterceptor";
     UserDetailComponent,
     NotFoundComponent,
     LoginComponent,
-    LimitToPipe,
-    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +38,7 @@ import { AuthInterceptor } from "./AuthInterceptor";
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ProductsModule,
   ],
   providers: [
     ProductsService,

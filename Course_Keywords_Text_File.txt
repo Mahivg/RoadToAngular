@@ -1,0 +1,1340 @@
+
+Javacript -> 
+
+Jqeury -> 
+
+MVC Pattern
+
+	AngularJs Angular 1.x -> Google 
+	
+	
+	Typescript 
+	
+		Angular 2.x to 9.X (MVC)
+		
+		
+
+Multi page application
+ index.html
+ contact.html
+ 
+ index.html -> Single Page Applicaiton (SPA)
+	content -> contact.html
+	contact
+
+
+ Hypertext Markup Language 
+	
+	JSP	
+	
+	XHTML
+
+	html 4	
+	
+	html 5
+	
+
+  A web browser -> Text Editor
+  
+  Tim Berners - Lee 1990
+  
+  <h1 id="txtH1"   > Headings... </h1>
+  
+  id, class, style, name
+  
+   Attribute_key = attribute_value
+   
+   CSS -> Cascading Styling Sheet
+   
+		website design -> add stying to our HTML elements
+		
+		.css
+		
+			.scss
+			.sass ( ruby )
+   
+   
+		selectors  
+		
+			selector ( element, elementId, elementClass ) { propertyName : propertyValue }  => element selector, ID selector, attribute selector, class selector, psuedo Selector
+			
+			
+		
+		
+			color, background-color, font-style, font-size, postion, distancing element ( margin, padding )
+			
+			Distance between content and the element   => padding
+			
+			Distance between sibling element or its parent element or neighbour element => margin
+			
+			
+			Color:
+				
+				red, blue, aqua
+				
+				#ff00ae 0,1,2,3,4,5,,6,7,8,9,a,b,c,d,e,f(255)
+				#ff0000
+				#f00
+				
+				rgb(0, 0, 255)
+
+
+			margin: 10px => margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;
+			
+			margin: 10px 5px; => margin-top: 10px; margin-bottom: 10px;  margin-right: 5px;; margin-left: 5px;
+			
+			m
+			
+			
+			Position :
+			 
+				(top, bottom, right, left)
+			 
+				static (default)
+				
+				fixed (browser window)
+				
+				absolute
+				
+				relative
+				
+				intial
+				
+				inherit
+				
+				
+		Bootstrap 
+		
+		Angular Material
+		
+	Javascript 
+	
+		Its Browser Language
+		
+		Make interaction
+		
+		window, document
+		
+		ECMAScript Specification => Europiean Computer Manufacturer Association
+		
+		1991 => 2015 => 
+		
+			ES5 -> version
+			
+			ES2015/ES6 -> Current version
+
+
+		variables 
+		
+			var, let, const
+			
+			var id = "id";
+			
+			1) cannot be a reserverd keyword
+			2) meaningful
+				productNameOfAloeVera => camelcase
+				
+			3) space or hypen
+		
+		Data types:
+		
+			primitive datatypes => string, number, boolean, null, undefined
+			
+			Object referece => Array, JSON Object, Functions
+			
+		Main => dynamic typing programing language
+		
+		
+		var id = "id";
+		
+		addWith3(3) => 6
+		
+		addWith3('3') => 33
+		
+		function addWith3 (number) {
+		
+			return 3 + number;
+		}
+		
+		
+		E56 =>
+		
+			
+		Advantages:
+		
+			easy to learn
+			speed
+			simple setup
+			
+		Dis-Advantages:
+		
+			dynamic typing
+			code is always vixible
+			single threderd
+			boilerplate code
+			
+		
+		$JQuery 
+		
+			document.getElementById('myBtn)
+			
+			$('#myBtn')
+		
+		MVC => Model(
+				POJO, Product (id,name, desction) js (event)
+			), view (html), Controller (interaction) (business logic)
+			
+		AngularJS => Javascript, angular.element('#id') =>  1.X to 1.9.X
+		
+		Typescript => rewritted of Javascript or superset of Javascript 
+		
+				1) static typing 
+				
+				2) OOPS (object oriented programing) (interface. inheritance, encapsulation)
+				 
+				myname = "string";
+				myname = number;
+		.ts
+		
+		typescript compiler => ts to js
+		
+		
+		browser -> js
+		
+		
+		Angular + TypeScript => Angular 2.X.X to 9.X
+		
+		Setup :
+		
+			1) Node.js Installed
+			
+			2) Install typescript
+		
+		Node
+			package.json -> definition of third party packeages used in our application
+			
+		Typescript:
+		
+			Typed superset of javascript
+			
+			Static typing 
+			
+			Added Types, OOPS
+			
+			Cant understand Typescript
+			
+			npm install -g typescript@latest
+			
+			tsc -v
+			
+			
+			
+		Types:
+		
+			number 			1, 5.3, -10					All Numbers
+			
+			string 			's', "s", `g ${}`			All text values
+			
+			Boolean			true || false				either one of true or false
+			
+			object 			{ key : value }
+			
+			
+			
+		src 
+		
+			users
+				ts1.ts
+				
+			products
+			
+				ts2.ts
+				
+	 ts1.js
+	 ts2.js
+	 
+	 minification
+	 
+			//commnets
+			//function myFUnction () {} => function a () {} => gulp.js
+	 main.js
+	 
+	 webpack
+	 
+	 Angular Application Environment
+	 
+		angular\cli 
+		
+		npm install -g @angular/cli@latest
+		
+		ng --version
+		
+		ng new "applicationName"
+		
+		ng serve
+		
+		
+		polyfills.js
+		
+		
+			duhicjndssdk
+			
+			arryy.forEach  || 
+			
+			
+		 
+		ES5 
+		
+		ES6
+			
+
+		MyTestApp  =>  RecipeBook ( recipeList => Ingredient )
+
+
+	Angular :
+		JS framework to create SPA
+
+
+	AngularJS (MVC) -> Angular 2   --------- ----- > Angular 9 
+
+						simple, backword compatible 
+
+						http -> angular/http/HttpClient
+								-> angular/common
+				angular 4 -> angular 6
+					JIT (Just In Time)   ->  AOT (Ahead Of Time)
+
+
+	Components and Directives 
+
+		<h1> Test </h1> ->  Test
+
+
+		<custom-html-tags customDirective>
+		
+			
+			custom view binded for this  -> .html
+
+
+			css file binded to it -> .css
+
+
+			TS file will be attached -> .ts
+		</custom-html-tags>
+
+
+		Modules :
+
+			Group of functionalities
+
+			Feature wise budled
+
+				exported user.module.ts -> declare 
+
+
+				employee.module.ts -> imports : [UserModule]
+
+
+		Default App :
+
+			ng new AppName
+			
+			AppModule -> Bootstrap Module
+			
+				AppComponent -> Bootstrap Component ( Parent for all component )
+			
+						Logincal piece of angular
+
+							products -> list out all products -> ProductListComponent -> fetch product and display it
+
+																					-> .ts -> fetch the products -> products , name = ""
+																					-> Data binding -> one way data binding || two way data binding
+
+							productDetailComponent 
+
+					Encapsulated 
+						 app-root p products
+						
+							<app-child>
+								p
+
+							<app-child-2>
+								p 
+			
+		Custom components 
+
+			angular cli commands 
+				 ng generate component 'component-Name'
+				 ng g c 'component-Name'
+
+			products
+				
+				products.component.ts
+				products.component.html
+				products.component.css
+
+
+			Data Binding
+
+					Communication => typescript controller to HTML
+
+			 Oneway data binding
+
+
+				--> {{ variable }}
+
+			Html -> button click event -> contoller ( one way ) ()
+
+			contoller -> changed the value -> html ( one way ) []
+
+
+			Two way data binding --> [(ngModel)]="variable"
+
+
+			
+			Directive 
+
+				1) inbuild directive  2) custom directives				
+
+					Attribute Directive -> it will add behaviour to our HTML -> adding style, class (AD)
+
+					Inbuilt
+					
+						[ngStyle]="{ key : 'value' }"
+						[ngClass]="{ 'className' : expression }"			
+
+
+					Structural Directive -> deals with HTML Tree structure
+
+						*ngIf  --> *ngIf="true" 
+								Truthy => true, 1, "string", object
+								Falsy => false, 0, "", undefined, null
+
+						*ngFor --> Loops -> used for iteration
+
+
+				Custom Directive :
+
+				
+
+
+				ng new AppName --prefix=pre
+
+
+
+				app 
+					header
+						header.component.***
+
+					recipies -> recipe.compnet.css , encapsulation.none
+
+							recipe-list -> [Obj1,obj 2]
+								recipe-item ->  {obj1 } 
+									recipe-item.component.**
+								recipe-list.component.***
+
+							recipe-detail
+								recipe-detail.component.**
+
+
+						recipes.component.**
+					shopping-list
+						shopping-details						
+							shopping-details.component.*** //form to add
+						shopping-list.component.***
+
+					app.componenet.**
+				
+		
+		
+		Communication b.w components
+		
+				
+				products --> product  -> product = newProduct -> newProduct
+				
+					product-detail  --> product (received) -> emitting a new product -> newProduct
+					
+			
+		<ng-content></ng-content>
+		
+		
+		Life cycle Methods: 
+		
+		
+		ngOnChanges						--> OnChanges   --> @Input() parent  -> ngOnChnages(changes : SimpleChanges) { previous, current }
+		
+		ngOnInit						--> OnInit      --> Time of initialization 
+		
+		ngDoCheck						--> DoCheck     -->  Any change 
+		
+		ngAfterContentInit				--> AfterContentInit  --> <ng-content>
+		
+		ngAfterContentChecked			--> AfterContentChecked --> change detection in our ng-content
+		
+		ngAfterViewInit					--> AfterViewInit  -->  component html content initilization
+		
+		ngAfterViweChecked				--> AfterViewChecked  --> change detected in our component Html
+		
+		ngOnDestory						--> OnDestory   --> at time of removing the component from current contect  -> clean up process
+		
+		
+		class Class1 implmenets OnInit, OnDestroy. OnChanges {
+		
+				ngOnInit(){ }
+		
+		}
+
+
+		
+		class Recipe {   new Recipe();  Model 
+		
+			name: string;
+			
+			description: string;
+			
+			
+			get Name() {
+				return this.name;
+			}
+		}
+
+		Recipe Book App Component Communication
+			
+		App Component
+		
+			Recipes --> 1) Push recipes to Recipe List component --> 7) catch the recipe object passed -> 8) push it to recipe detail
+			
+				Recipe-List --> 2) receives the recipe list and iterate each recipes -> 3) pushing object to recipe item -> 5) catch name and find the recipe object -> 6) emit the recipe object to parent
+				
+					Recipe-item -> 4) receive the recipe object and project the view -->  4)(click) -> emit the name 
+						
+				Recipe-detail -> 9) receive object from recipes component -> 10) use it for display
+				
+			Shopping-list -> catch the object and then push to current array
+			
+				shopping-detail  --> name, quantity -> add button -> new iNgredient object -> pass to shopping list
+				
+				
+				
+		Game Component 
+		
+				
+				counter
+				
+				setInterval ( () => { emit(counter) , counter ++ ; } , 5000 )
+				
+			[Start] [Stop]
+				
+			<odd >
+				
+				oddNUmber []
+				
+				 number - 1 
+				 number - 3
+			
+			
+			<even>
+				number - 2
+				
+				
+				
+		Directive - Deep Dive
+		
+		Structural DIrective
+		
+			*ngIf="1 === 1" 
+				
+				
+				<div *ngIf="1==1; else elseBlock">
+					condition true
+				</div>
+				
+				<ng-template #elseBlock>
+					<div > !false
+						condtion false
+					</div>
+				</ng-template>
+				
+		
+			ngFor
+				
+				*ngFor ="let prod of products; let i = index;"
+				
+			<ng-container *ngIf="showNumIter" <ng-container>
+				<div *ngFor=" let num of numbers"  >
+				</div> 
+			<ng-container>
+			 
+		
+		
+		Attribute DIrective
+			 
+			 ngStyle = { 'background-color' : i > 5  ? 'yellow' : 'none' }
+			 
+			 ngClass = { 'even' : i > 5 }
+			 
+				
+			
+		
+		Products Service
+		
+			products: Product[] => 4
+			
+			
+			ProductsComponetns
+			
+				new ProductSerice => PS ( {products => 4 )
+				
+				
+				
+			ProductDetailComponent
+			
+				new ProductSerice => PS ( {products => 4 )
+			
+		Service
+			
+			1) it will maintain same state within the context
+			
+			
+		Injection Hierachy:
+		
+			1) Appmodules providers => Global context => same state of instance throughout the app
+			
+						@Injectable({
+							providedIn : 'root'
+						})
+						export class ProductsService { }   ==> equanlent to Adding aservice in appmodule level provider array
+
+			2) Component level : => components and its childs will recieve the same state
+									-> unless they have thoer own provider array
+	
+			
+				Bootstrap Component => parent for all component 
+				
+					AppComponent
+						providers : [ PrintService, ProductSerice ]
+						
+						productCompoent
+						
+							printSrvice -> var -> changed
+				
+				Normal component
+					
+					productCompoent => providers
+						productDetailComponet => share the same
+					
+					
+				PrintService
+				
+				ProductService 
+				
+					constructor( private printService: PrintService ) {
+					
+				}
+				
+				
+				Appmodule -> providers
+				
+					Appcomponet
+					
+					ProductComponet
+					
+					product detail component
+					
+					ProductService
+					
+					Print service
+					
+				Appcomponent
+				
+					ProductsComponetns
+							 
+						productdetailComponent
+						
+							providers; []
+				
+								proc Component
+									
+							
+									pridhc
+										providers ; []
+				productdetailComponent
+						
+							providers; []
+				
+								proc Component
+									
+							
+									pridhc
+										providers ; []
+										
+										
+				onProductChange  = new EventEmitter<Prodcut>();
+				
+				
+				
+				ProdcutService
+				
+					onChange = New EventEmitter<Product>();
+					
+				Recipes
+					productService ( onChange)
+					
+						this.productService.onChange.pipe((product) => (
+							change
+						)).subscribe((product) => {
+							
+						});
+				
+				RecipesList
+				
+					productService ( onChange )
+					
+					this.productService.onChange.emit(product);
+				
+				
+				construtor(private http: HttpClient)
+				
+					Routing
+					
+						Router => 
+						
+						ActivatedRoute =>
+					
+				a class having a provider => service
+				
+				
+				Recipes
+					RecipeList
+						recipeItem
+						
+					RecipeDetail
+				
+				Component Communication
+				
+					1) Input, output ( Event Emitter (publish/subscribe) )
+					
+					2) Service
+					
+					3) Observables (rxjs) (Subject)
+					
+			
+			Observabels 
+			
+				Data communication ( publish /subscribe )
+				
+				1 )100 products => returning 100 products => 10 products => stream
+				
+				2) we can modify the data before it reaches the subscribe block
+				
+				3) error handling
+				
+				
+			
+			Routing
+				
+				change html based on url change
+			
+			
+				Routes
+				
+				Route = { path: 'products' , component : ProductsComponent },
+						{ path: 'users', componenet: Userscomponent }.
+						
+						
+						ProductsComponmet - root
+						
+							Product-details - child
+							
+				Placeholder => <router-outlet>
+				
+				
+				changing url 
+				
+					routerLink="users/1"
+					
+					[routerLink]="['users', '1']"
+					
+					productsCOmponet
+					
+						display all products
+						
+						id=1
+					
+					product
+						id
+						name
+					
+					
+					ProductDetailComponent => products/:id
+					
+						id=1
+						
+						product = productsService.getProductbyId(id)
+					
+						disply only one product
+					
+				
+				ProductsComponent
+						['products', 1 ] => products/1
+							id: 1
+
+						=> ProductDetailCOmponent { id: '' }
+						
+						router: Router						
+						
+						route : ActivatedRoute
+						
+						this.route.parms => Observables
+						
+						this.route.queryParams => Observable
+						
+						
+				Assignemt
+				
+				
+					Active						
+					
+						{ name, status }
+					
+						user 1 => setTOInActive
+						user 3 => setTOInActive
+						
+					InActivex  
+						
+						user 2 => setToActive
+						user 4 => setTOActv
+						
+						
+				app-component
+					<router-outlet>
+					
+					<products>
+					
+						<router-outlet>
+						
+						<product-detail>
+						
+				products => productsComponent
+				
+						=> :id/view => productDetails => products/:id/view
+						
+				Path
+					1) Relative Path
+				
+						products
+						
+							products/3/view
+							
+							=> users => this.router.navigate(['users']) => products/3/view/users
+							
+						users
+						
+							users/id
+							
+					2) Absolute Path
+					
+						products
+						
+							products/3/view
+							
+							=> users => this.router.navigate(['/users']) => localhost:4200/users
+							
+						users
+						
+							users/id
+							
+				Styling based on route
+				
+					routerLinkActive: 'className'
+					
+				Gaurd
+				
+					before a route change , if you want to execute some set of lines / logic
+					
+					
+					Products =>        GAURD          => productDetail
+					
+					
+					Route 1 => Route 2
+					
+					localhost:4200/ Products
+					
+					localhost:4200 / users
+					
+					Entering Route => Gaurd
+					
+					Leaving from a route => Gaurd
+						
+						
+				
+				LoginPage
+				
+					userName
+					password => AuthService => isUserLoggedIn: true
+				
+				
+				localhost:4200 => login
+				
+				
+				localhost:4200/products
+				
+				Login => Products
+				
+							Products => AuthService.isUserLoggedIn == true => redirectTOLogin
+				
+				
+						
+				Forms :
+				
+					FirstName,
+					Lastname
+					Gender,
+					Email => test@gmail.com , test => validation
+					phone
+					Degree
+					
+					
+				Angular provides
+				
+				`1) Template Driven Forms (TD)
+				
+						We create forms in Html
+						
+						pass to Controller ( component.ts)
+						
+						Simple forms
+						
+						need so much coding
+						
+						FormsModule => imports of Appmodule should have Formsmodule
+				
+				 2) Reactive Forms ( Reactive )
+					
+						Forms will be created in controller ( Component.ts )
+						
+						Binds to the 
+						
+						complex forms
+						
+						comfortbale
+						
+						ReactiveFormModules = > imports of Appmodule should have ReactiveFormModules
+					
+					
+				Template Driven Forms
+				
+					1) <form> </form> #loginForm = 'ngForm'
+					
+					2) template reference and injected ngForm
+					
+					3) To create form controls
+					
+						=> input control => name property and should have a ngModel [(ngModel)], ngModel
+						
+					4) Form submit event
+					
+						ngForm => (ngSubmit) => onFormSubmit
+						
+					5) extract value
+					
+						ngForm => value =>
+						
+						
+						control names = >	userName, password
+							
+							{
+							
+								userName : "",
+								
+								password: ""
+							}
+				
+				
+				6) State
+				
+					Forms
+					
+						submitted => true / false => clicking of submit button
+						
+						valid
+					
+					FormControl #txtPassword="ngModel"
+					
+						valid
+						
+						errors						
+						
+						touched
+						
+					firstName: 
+					
+					lastName
+					
+					gender
+					
+					age
+					
+					address : {
+						line1: 
+						
+						line 2: 
+					}
+						
+						
+						
+					<div class="text-box">
+        <input
+          name="name"
+          type="password"
+          placeholder="Password"
+          #txtPassword="ngModel"
+          ngModel
+          required
+          minlength="6"
+        />
+      </div>
+	  
+	  
+	  
+	  <div class="text-box">
+        <input
+          name="gender"
+          type="password"
+          placeholder="Password"
+          #txtPassword="ngModel"
+          ngModel
+          required
+          minlength="6"
+        />
+      </div> 
+	  
+	  
+		 <section #address="ngModelGroup">
+			  <div class="text-box">
+				<input
+				  name="line1"
+				  type="password"
+				  placeholder="Password"
+				  #txtPassword="ngModel"
+				  ngModel
+				  required
+				  minlength="6"
+				/>
+			  </div><div class="text-box">
+				<input
+				  name="line2"
+				  type="password"
+				  placeholder="Password"
+				  #txtPassword="ngModel"
+				  ngModel
+				  required
+				  minlength="6"
+				/>
+		  </div>
+				
+		</section>
+		
+		this.loginForm.value => 
+			
+			
+		Reactive Forms:
+	
+			 FormGroup :
+			 
+				formcontrols
+				
+			FormBuilder
+			
+				fb.group
+				
+			
+			 let loginFG = new FormGroup({	 
+			 
+				userName: new FormControl('')
+				password: new FormControl('')
+				
+			});
+			
+			let loginFG1 = new FormGr
+			
+			let person = { name: '', age: '')
+			
+			person['age'}
+			person.age
+			
+			this.loginFG.controls['userName'].error
+	
+	
+	PIPE:
+	
+		used to modify/format your output visual
+		
+		default pipes from angular
+		
+			lowercase, uppercase, date, limitTo, json, currency, async
+	
+		{{ person.name | lowerCase }}
+		
+		Chanining
+		
+			{{ person.name | lowercase | uppercase | slice:0:3 }}
+			
+			should be valid order
+			
+			
+			{{ person.name | json | uppercase }}
+			
+			{{ persons | filter }}
+			
+	
+	
+	HTTP
+	
+		Client 
+		
+			userName : password  => Request => response
+			
+			
+		HTTP Calls
+		
+		
+		Backend / Restful API (Java) / WebApi ( C# or .net )=> provide you data 
+		
+			DB
+			
+				Validate =>  respose
+				
+				
+		
+		Login ( MyTestApp) => stateFull
+		
+			userName, password => authenticate user => Authorized to acces our client application pages
+			
+			Request => userName, password
+					Response => { APIKey, sessionTime (600s) }
+			
+					AuthService
+						apiKey : APIKey
+						
+						SetInterval(sessiontime, apiKey)
+						
+						
+					ProductGaurd
+					
+						Auth.apiKey
+						
+			
+		
+		Backend ( stateless ) => MyTestApp ( userName, password) => returen valid
+		
+		
+			validate(userName, password)
+			
+				from DB 
+				
+					Valid => return Response { APIKey, sessionTime (600s) }
+				
+				
+		What an HTTP call will have?
+		
+			Verb / Action => GET, POST. PUT, DELETE
+			
+			URL ( Endpoint ) => 
+			
+			Headers (request/response) (Meta data)
+			
+			Body ( POST, PUT ) => User => 
+			
+			headers
+			
+			
+			Interceptor
+			
+			GET ( users, products, products/id )  => Request || Modify the request   header(authToken) => newReq   <=> https://jsonplaceholder.typicode.com/users
+			
+			GET  https://jsonplaceholder.typicode.com/users
+			
+			POST
+			
+			PUT
+			
+			DELETE
+			
+			
+	
+	
+	Organizing File structure : 
+	
+		app
+			login
+				login.component.***
+			products
+				product-detail
+				products-list
+				
+				products.module.ts
+					declarations: [
+						ProductListCOmponent,
+						ProductDetailsComponent
+					]
+				
+			users
+				user-list
+				user-detail
+				
+				users.module.ts
+					declarations: [
+						UserListCOmponent,
+						UserDetailsComponent
+					]
+			shared
+				pipe
+					my-custom-directive.ts
+				service
+					logging.service.ts					
+				modal				
+				
+				component
+			Model
+				Product.ts
+				User.ts
+				
+					
+			
+			app.componet.***
+			app.module.ts
+				ProductsMOdule, UserModule
+			
+			
+		Production Build
+		
+			ng build --prod
+			
+			HttpServer => mytestprod.com
+			
+						/index.html
+			
+				
+		Deployment usign Firebase
+		
+		some ng commands overview
+		
+			.editorconfig = quote_type = single
+			
+			ng lint
+			
+			ctrl + K, ctrl + shift + s => without formatting
+			
+		
+			ng new AppName --prefix=lv --styles=css
+			
+			ng serve --port=4300
+			
+			
+	MailID
+			
+		lavanyasivasankaran96@gmail.com
+
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+						
+						
+				
+					
+						
+				
+				
+				
+				
+				
+				
+				
+			
+								
+	
+	
+	
+		
+			
+			
+			
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+		
+			
+			
+			
+		
+		
+		
+		
+		
+		
+				
+				
+				
+				
+				
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
