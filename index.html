@@ -1,0 +1,257 @@
+<!-- Type declaration-->
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basics Of HTML</title>
+	<link rel="stylesheet" href="my-styles.css" />
+	<link rel="stylesheet" href="./node_modules/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Headings -->
+
+    Heading 1
+
+
+    <div style="display:none">
+		<div id="div1" name="div1" >
+      <div>
+        <div>
+          <h1> Test</h1>
+        </div>
+
+        <h2 class="right-align color-blue"> Test 2</h2>
+      </div>
+      <h1>Name</h1>
+      <h2>Age</h2>
+    </div>
+
+
+    <section>
+      <div>
+        <h2>Section</h2>
+      </div>
+    </section>
+
+    <h1  >Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- Paragraph -->
+
+    <p>
+      <small>Lorem Ipsum </small> is <strong> dummy text </strong>of the
+      printing and <em> typesetting industry. </em>Lorem Ipsum has been the
+      industry's standard dummy text ever since the 1500s, when an unknown
+      printer took a galley of type and scrambled it to make a type specimen
+      book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was
+      popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software
+      like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <!-- Lists -->
+
+    <!--  Unordred List -->
+    <ul>
+      <li>Test 1</li>
+      <li>Test 2</li>
+      <li>Test 3</li>
+      <li>Test 4</li>
+    </ul>
+
+    <!-- Ordered List -->
+
+    <ol>
+      <li>Test 1</li>
+      <li>Test 2</li>
+      <li>Test 3</li>
+      <li>Test 4</li>
+    </ol>
+
+    <table style="visibility:hidden">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Age</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Magesh</td>
+          <td>25</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+
+    <hr />
+
+    <br />
+
+    <img
+      src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    />
+
+    <span> hello world </span>
+
+    <span> hello world</span>
+
+
+    <br />
+
+    </br/>
+
+
+    <form>
+        
+        <label> Name </label>
+        <input type="text" />
+
+        <br />
+
+        <br />
+
+        <label> Age </label>
+
+        <input type="number" />
+
+
+        <br />
+
+        <br />
+
+
+        <label> DOB : </label>
+
+        <input type="date" />
+
+
+        <br />
+
+        <br />
+
+
+        <label> Gender </label>
+
+        <select>
+            <option> Male </option>
+            <option> Female </option>
+            <option>TG</option> 
+        </select>
+
+        <br />
+
+        <br />
+
+        <label> Gender </label>
+
+       <input type="checkbox" /> Male
+       <input type="checkbox" /> Female
+        <br />
+
+        <br />
+
+        <label> Gender </label>
+
+       <input type="radio" /> Male
+       <input type="radio" /> Female
+       
+	   <br />
+
+       <br />
+
+
+
+        <button type="button" class="btn btn-primary"> Click Me</button>
+        <button type="submit" >Submit </button>
+
+    </form>
+
+
+		<div style="width:200px; height: 200px; background-color:#4ff13b; position: relative; top: 20px;" class="right-align">
+
+				 <p class="pos-elem"> Relative </p>
+			
+		</div>
+
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<br />
+		<br />
+		<br />
+		<br />
+
+
+	
+		<div style="width:200px; height: 200px; background-color:yellow; position: relative;">
+		
+			<div style="width:50px; height: 50px; background-color:red; position: absolute; top:-20px; right:-20px; border-radius: 40px;">
+					1
+			</div>
+
+		</div>
+
+
+
+<div class="myDiv">
+		
+	<div id="div2">
+			Div 2
+	</div>
+
+
+	<div id="div3"> 
+		Div 3
+
+	</div>
+
+
+</div>
+
+<div style="margin-top: 500px">
+</div>
+
+		<footer style="position: absolute; bottom:0px;">
+				<p> copyright </p>
+		</footer>
+	</div>
+	
+	<div class="flex-container">		
+		<div id="card1" class="flex-card">
+			<h4> Title 1</h4>
+			<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+		
+		</div>
+		<!-- <div id="card2" class="flex-card">
+		<h4> Title 2</h4>
+			<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+		</div>
+		<div id="card3" class="flex-card">
+			<h4> Title 3</h4>
+			<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+		</div>
+		<div id="card4" class="flex-card">
+			<h4> Title 4</h4>
+			<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+		</div>	
+		<div id="card5" class="flex-card">
+			<h4> Title 5</h4>
+			<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+		</div>		 -->
+	</div>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,155 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: #7dc0ef;
+	height: 70px;
+}
+
+nav ul  {
+	float: right;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 20px;
+	padding: 10px;
+	
+}
+
+nav ul li a {
+	
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 3px;
+	color: black;
+}
+
+nav ul li.active a {	
+	color: green;
+}
+
+.active {
+	background-color: white;
+	color: green;
+}
+
+
+nav ul li:hover {	
+	background-color: white;
+	color: green;
+}
+
+nav ul li:hover a {
+	color: green;
+}
+
+.img-container {
+	margin: 0 10%;
+	border-bottom: 1px solid green;
+}
+
+.banner-image {
+	height: 500px;
+	width: 1200px;
+}
+
+section {
+	margin-top : 10px;
+	margin-bottom: 10px;
+}
+
+.flex-container{
+	
+	margin: 0 10%;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffcba8;
+}
+
+.flex-card {
+	height: 400px;
+	width: 400px;
+	border: 1px solid black;
+	margin: 20px;
+	padding: 20px;	
+	background-color: #98bad3;
+	box-shadow: 3px 4px 10px -2px #5d5d5d;
+	cursor: pointer;
+	transition: 200ms transform ease-in;
+}
+
+.flex-card h4 {
+	text-align: center;
+	color: green;
+}
+
+.flex-card p {	
+	text-align: justify;
+}
+
+.flex-card:hover {
+	transform: scale(1.1);
+}
+
+.ready {
+	
+	margin: 0 10%;
+	
+		
+}
+
+.ready h2 {
+	text-align: center;
+	padding: 10px;
+	background-color: #aeaeae;
+	color: brown;
+}
+
+
+.ready p {
+	text-align: justify;
+}
+
+
+@media(min-width: 720px) {
+		
+	.flex-card h4 {
+		text-align: center;
+		color: red;
+	}
+	
+	.flex-container{
+	
+		margin: 0 10%;
+		display: flex;
+		flex-direction: row;
+		background-color: #ffcba8;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

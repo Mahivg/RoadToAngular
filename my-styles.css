@@ -1,0 +1,84 @@
+
+	
+	#div1 {
+		height: 200px; 
+		width: 200px; 
+		background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); 
+		position: fixed; 
+		top:20px;
+		right: 0px;
+	}
+
+	h1 {
+		color: red;
+	}
+
+	.right-align {
+		float : right;
+	}
+
+	.color-blue {
+		color: blue;
+	}
+	.pos-elem{
+		color: white;
+		font-size: 35px;
+		text-style: bold;
+	}
+
+	.myDiv{
+			height: 200px;
+			width: 200px;
+			background-color: lightblue;
+			margin-top: 30px;
+	}
+	
+	.flex-container{
+		margin: 20px;
+		background-color: #93aed1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.flex-card {
+		height: 400px;
+		width: 400px;
+		padding: 10px;
+		background-color: #006280;
+		color: #fff;
+		border: 1px solid #fff;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.flex-card h4 {
+		text-align: center;
+	}
+	
+	.flex-card p {
+		text-align: justify;
+	}
+	
+	.flex-card:hover {
+		background-color: orange;
+		transform: rotate(720deg);
+	}
+	
+	#card1 {
+		transition: 2000ms all linear;
+	}
+	
+	
+	#card2 {
+		transition: 1000ms all ease-in;
+	}
+	#card3 {
+		transition: 1000ms all ease-out;
+	}
+	#card4 {
+		transition: 1000ms all ease-in-out;
+	}
+	
+	
+	
