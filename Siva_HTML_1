@@ -1,0 +1,696 @@
+
+
+Types of Front end Application:
+
+	1) Mutli Page Application
+		index.html => About my project -> Contact Us
+		contact.html => contacts and map locations
+		
+	2) Single Page Application
+		
+		index.html 
+		
+			Content wil change based on some condition
+			
+			
+		Name 			Age
+		
+		Magesh			25
+		
+		
+	HTML Element
+	
+	<p>
+	 hello world
+	 
+	 
+	</p>
+	
+		1) Inline Element -> it will occupy only the content length in the browser
+				
+				<span>, <strong>, <em> , <img>, <a>, <small>
+				start next to postion
+				
+				
+		2) Block Element -> will occupy whole length of Browser
+							always starts in new line
+		
+				<h1 to h6> <p> <div>, <form>
+				
+				tags -> Document Object Element (DOM)
+				Hi
+				
+		Grouping Tags
+		
+			1) div -> block element, which used to group html tags
+			2) section -> which also useful for grouping elements
+			
+			
+			
+		Utility Tags
+		 <hr />
+		 <br />
+		 
+		 
+		 Tags have attribute
+			id
+			name
+			style
+			class
+			
+		<tag-name id="myId" name="myName" style="" class="" > </tag-name>
+		 
+		 
+		Form Tags
+		
+			<input type="text" />
+
+
+		CSS - Cascading Style sheet 
+
+
+			- we can styles to our html elements
+
+
+		Style sheet :
+
+		Height, width, background-color, box-shadow, z-index , backgorund image, position
+	
+		text  styles 
+			
+			font 
+				size, color, family, styles
+
+
+			decoration
+
+				underlined, strikethrough, align, Jusify
+
+		img
+			height, width, 
+
+			
+		distancing elements 
+
+
+
+		3 ways to apply styles to elements
+
+
+			1) on top of element 
+
+
+			2) Within the HTML document we can write our styles 
+
+			
+			3) External file and we can refer in our HTML
+
+
+
+		position:
+
+
+			1) static 
+
+					position: static;
+
+						normal HTML or DOM flow
+
+			2)  fixed
+
+
+					positon : fixed;
+
+					top: 20px;
+
+					left: 20px;
+				
+
+					with respect to window view port
+
+
+					expect positioning properties
+
+
+					 1) it is not in HTML flow
+
+	
+
+
+						top, right, left, bottom
+
+			3) relative:
+
+					position: relative;
+
+					remove the normal flow
+
+					with respect to neighbours
+
+					expect postioning properties (top, left, right, bottom)
+
+			4) abosolute:
+
+				position: absolute;
+
+				remove normal flow
+
+				with respect to containing element
+			
+				expect positionaing property to change the position with respect to container element, container element should be a relative element.
+			
+
+			border-radius 
+
+				0 ->>> 40px;
+
+			float:
+
+
+
+			CSS selectors :
+
+				Element selector
+
+
+					h1 {
+						color: red;
+					}
+
+
+
+				ID Selector 
+
+
+					#Id {
+
+
+					}
+
+
+				Attribute Selector
+
+					div[name="div1"]
+
+				class selector
+				
+					.test
+
+					reusable
+
+					3rd party will use this
+				
+
+			background-color for element
+
+			color for the text
+
+
+		Color : 
+
+
+			color : white; // named
+
+
+			color : RGB;  0 to f, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c ,d, e, f
+
+					#ff7788 -> Hex format	
+
+					#f78 -> Hex format short hand
+
+
+					#f00 -> red
+			color: rgb(255,0 ,0)
+			
+			
+			
+			Behavoiur Of HTML
+			
+				display: none;
+				display : block;
+				display : inline;
+				display: inline-block;
+				
+			Layout Out:
+				display: flex;
+				display: grid;
+			
+			
+			flex-container
+				flex-card
+				flex-card
+				flex-card
+			
+					
+			transition : timing property/all typeOfTranstion(linear. easein,easeout, easeintout)
+			
+			transform : rotate(), scale(), translate()
+			
+			@media( minwidth: 720px)
+			
+			
+		
+		MEAN (MongoDB, ExpressJS, Angular, NodeJS) => serverless 
+
+
+		MongoDB							Angular Application
+		
+					1) I Need products
+					
+					2) ExpressJS => GetProducts => Fetch from MongoDB => Response
+					
+					3) setnt to Angular
+
+
+
+		JAVA 
+		
+			new Date()
+			
+			
+		Type conversion => MessageConverter => Java object = JSObject
+			
+			
+		JS
+		
+			New Date()
+
+
+	Javascript
+	
+		=> Programming Language
+		
+		=> Browser's Language
+		
+		=> Specication ECMA (European computer manufaxcutrare association) ECMAScript Specification
+		
+		=> ES5, ES6
+		
+		=> polyfills.js
+		
+		
+	Typescript
+		types, Object Oriented Programming
+		
+		var num : string;
+		
+		
+		
+		Environment Setup
+		
+			Node => Node.js 
+			
+				NPM Repository
+				
+					All the frameworks exsits
+					
+					using some commands we can fetch the libraries we need
+					
+					npm install bootstrap 
+					npm install bootstrap
+					npm install bootstrap
+					npm install bootstrap
+					npm install bootstrap
+					
+
+					test => cmd 
+					
+						node_modules
+						
+							bootstrap
+							angular
+							
+							
+						package.json
+						
+						dependencies : {
+							"bootstrap: "4.4.1",
+							"test" : " test"
+						}
+						
+					Test1 => cmd
+					
+						package.json
+						
+						npm install
+					
+					Typescript
+					
+						tsc 
+						
+						
+					create a ts file
+						write come typed code
+						compile to get JS file
+						refer that to html
+						
+					
+					
+					Types
+					
+					  :
+					
+						string
+						number
+						boolean
+						string[]
+						number[]
+						boolean[]
+						object => { key : 'value' }
+						
+						[number, string] => Tuples => [ 1, 'string' ] => if it is fixed length and known tyoes
+						
+						any
+						
+						
+				Angular 1.x => 1.8
+
+	javascript => Typeless
+	
+	
+	
+
+	Angular 2
+
+		Typescript => 
+		
+	Javascript Application
+
+		Scripts.js			
+		
+		HTML => script => User interaction
+		
+				name : id
+				
+				age : id
+				
+				Gender: id
+				
+			document.getElementby(id)
+			
+			
+			document.getElementby()
+			
+		jQuery => Javascript Framework
+		
+			document.getElementby(id).value
+			$('#id').value =
+
+
+		Angular 1.x
+		
+			MVC Pattern = > Model , View, Controller
+			
+			model => data , Person, People
+			
+			Controller file = js file => logics => Person[] = { name, age }, functions
+			
+			one HTML => provide view 
+			
+			
+			Root HTML
+			
+			<html>
+			 <head>
+			  <body>			  
+				  products => Model => Product { name, price, description }, Products[] , view
+				  productView => Model, Controller, view
+			  
+			  </body>
+			  
+			  </html>
+			  
+		
+		
+		Angular 2
+		
+			Typescipt
+			
+				Advanced MVC => Component based architecture => TS, HTML, CSS
+				
+				<header>
+				
+					html, ts, css
+				<footer>
+					html, ts, css
+					
+				Feature
+				
+					feature1 => TS, HTML, CSS => <sv-products> </sv-products>
+					
+					feature2 => TS, HTML, CSS
+					
+					
+					
+				Components => custom HTML Tag 
+			
+			
+				Angular => Webpack => TS -> JS -> index.html => script
+				
+				styles.css => Root styles
+				
+				
+				Environment Setup;
+			
+					npm install -g angular/cli
+					
+					ng
+					
+				Create a new project
+				
+					ng new ApplicationName
+					
+					ng new MyTestApp
+					
+					ng serve || ng serve --port=4400
+		
+		
+		CSS .class1 { prp ; vaie }
+		
+	
+		.class1 {
+		}
+	
+		.class1 .class2 {
+		}
+	
+		<div class="class1">
+			<div class= "class2">
+			</div>
+		</div>
+		
+		
+		
+			SCSS
+			
+				.class1 {
+					height: 100px;
+					
+					.class2 {
+						width: 100px;
+					}
+				 }
+			
+			sass
+			
+				class1
+					height: 100
+					
+					class2					
+						width: px
+				
+				
+				.spec.ts => unit testing 
+				
+				
+			Main.ts
+			
+			
+				Appmodule => bootstrap
+				 
+				 index.html => app-root 
+				
+					AppComponent => bootstrap component => base view => <my-products></my-products>
+					
+						products => my-products
+						
+			Angular-CLI commands
+			
+				ng new ApplicationName
+				
+				ng serve || ng serve --port=4400
+
+			
+			Modularised programming
+			
+			
+				Seperation of concern
+				
+					HTML -> render view 
+					
+					TS -> controlling
+			
+			
+				AppModule
+				
+					AppComponet
+					
+					Products
+				
+				
+				FormsModule
+				
+					Apppc
+					
+				HttpClientModule				
+				
+					http call
+					 
+					
+			Angular 2 => Angular 9
+			
+			Angular 2 <= Backward compatable version upgrade => Angular 8
+ 			
+			
+				Compiler 
+					
+					JIT compiler => Just In Time compiler
+					
+					
+					AOT Compiler => Ahead of Time compiler
+					
+					
+					Ivy compiler
+					
+				HTTP => angular.http
+				
+				
+			MyTestApp => Learning some concept
+			
+			
+			RecipeBook => 
+			
+			
+			
+	CI/CD
+	
+		Application - Code ( DEVELOP, TEST, BUILD, DEPLOY ) (SCRIPTS)
+		
+			
+			Code collabaration
+				
+				Code Repository ( Github, gitlab ) 
+				
+					Version Control system			
+			
+			
+			Continous Integration and Continous Delivery
+			
+			When i made any change and add the code to repository
+			
+				CI/CD => Jenkins
+				
+							Source => Git URL
+							
+							Scripts => ng test
+									   ng build => Delopyable File =>
+									   
+									   
+							Custom Script => copy the files to some server ( AWS, Azure, Any server ) deploy
+										
+										
+			Angular
+				js => configuration
+				
+					{
+						api_url: 'https://endpoint'
+					}
+				
+			Spring
+			
+				.properties
+				
+				 api_url: 'https://endpoint'
+				 
+				 
+		
+		
+			
+			Component 
+			
+				create component
+				
+					create **.component.html
+					create **.component.css
+					create **.component.ts => annotate @(omponent({
+
+								selector : "app-root" app-root { }  h1 { }  <app-root>, <div class="app-root"> </div>
+								
+								template: 
+								
+								termplateUrl
+								
+								styles
+								
+								styleUrls
+						})
+					Decalre it in app.module.ts
+					
+				CLI commands
+				
+					ng generate component componentName
+					
+					ng generate component test --skipTests=true // https://angular.io/cli/generate
+					
+					ng g c test --prefix=shiva
+					
+					HeaderComponent
+
+						Karma - Jasmine Test frameworks
+						
+					
+						1. check app name is availabe
+						
+							some code to test 
+					
+					
+					ng new ApplicationName --prefix=shiva
+					
+			
+			
+			
+			
+			
+				
+				
+				
+				
+				
+	
+						
+						
+						
+					
+						
+					
+					
+					
+		
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+			
+				
