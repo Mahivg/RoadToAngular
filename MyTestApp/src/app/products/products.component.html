@@ -1,0 +1,82 @@
+<!-- Basics -->
+<div *ngIf="false">
+  <div class="m-3">
+    <h1>String interpolation</h1>
+
+    <h4 id="{{ h4Id }}">{{ title }}</h4>
+    <!-- String interpolation -->
+
+    <p>{{ product }}</p>
+
+    <p>Using function</p>
+
+    <p>{{ getProduct() }}</p>
+
+    <p>{{ 1 == 1 }}</p>
+
+    <p>{{ "stg" + "str2" }}</p>
+
+    <h1>Property Binding</h1>
+
+    <h4 [id]="h4Id" [textContent]="title"></h4>
+
+    <p>{{ product }}</p>
+
+    <p>Using function</p>
+
+    <p>{{ getProduct() }}</p>
+
+    <p>{{ 1 == 1 }}</p>
+
+    <p>{{ "stg" + "str2" }}</p>
+
+    <hr />
+
+    <p>HTML to controller</p>
+
+    <button type="button" class="btn btn-success" (click)="onButtonClick()">
+      Click Me!
+    </button>
+
+    <hr />
+
+    <div [ngStyle]="{ 'background-color': 'blue' }">
+      <h1>User Interaction</h1>
+
+      <label>Enter Your name </label>
+
+      <input type="text" class="col-md-6 form-control" [(ngModel)]="userName" />
+
+      <p [ngClass]="{ 'my-text': addClass }">{{ userName }}</p>
+
+      <button
+        type="button"
+        class="btn btn-primary m-3"
+        (click)="printUserName()"
+      >
+        Submit
+      </button>
+    </div>
+
+    <hr />
+
+    <div class="product-div">
+      <p>{{ product.name }}</p>
+    </div>
+  </div>
+</div>
+<h2>Products</h2>
+<div class="row">
+  <div class="card m-3 col-sm-4" *ngFor="let product of products">
+    <div class="card-body">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.price }}</p>
+    </div>
+  </div>
+</div>
+
+<div>
+  <button type="button" (click)="emitToParent()" class="btn btn-info">
+    Emit To Parent
+  </button>
+</div>

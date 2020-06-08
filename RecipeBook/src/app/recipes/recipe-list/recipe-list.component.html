@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+
+<div>
+  <div class="card m-2" *ngFor="let recipe of recipes">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-3">
+          <img [src]="recipe.imageUrl" alt="" class="img-fluid" />
+        </div>
+        <div class="col-sm-9">
+          <h2>{{ recipe.name }}</h2>
+          <p>{{ recipe.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

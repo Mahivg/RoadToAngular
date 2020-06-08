@@ -1,7 +1,20 @@
-<app-header></app-header>
+<app-header (onFeatureChange)="onMenuChange($event)"></app-header>
 
 <!-- <div app-header></div> -->
 
 <!-- <div class="app-header"></div> -->
 
-<app-test></app-test>
+<!-- <app-test></app-test> -->
+
+<div class="container">
+  <div *ngIf="feature === 'products'">
+    <app-products
+      [products]="appProducts"
+      (onProductEmit)="getFromChild($event)"
+    ></app-products>
+  </div>
+
+  <div *ngIf="feature === 'users'">
+    <app-users></app-users>
+  </div>
+</div>
