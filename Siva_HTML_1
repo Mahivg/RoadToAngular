@@ -246,7 +246,9 @@ Types of Front end Application:
 			
 			transform : rotate(), scale(), translate()
 			
-			@media( minwidth: 720px)
+			@media( minwidth: 720px) {
+			
+			}
 			
 			
 		
@@ -456,6 +458,16 @@ Types of Front end Application:
 					
 					ng
 					
+					Extenstions:
+					
+					ESLint
+					Prettier
+					Debugger for chrome
+					Path intelisense
+					Material Icon Theme
+					Dracula theme
+
+					
 				Create a new project
 				
 					ng new ApplicationName
@@ -656,6 +668,115 @@ Types of Front end Application:
 					
 					ng new ApplicationName --prefix=shiva
 					
+					
+	Data Binding :
+	
+		One way data binding
+		
+		 Controller to HTML => 1. String interpolation {{}} 
+							   2. Property Binding []
+							   
+							   
+		 HTML to Controller => Event Binding ()
+			
+			
+		userName
+		
+			controller  - input (html)=> 
+			
+			text input - controller
+	
+	Two way data binding => [(ngModel)]
+	
+	
+	Directives
+	
+		1. Attribute Directives
+			It will add additional behaviour to your HTML tag
+		2. Structral Directives
+			It will alter the HTML Tree
+	
+	[ngStyle]= "{ propertyName: value }
+	
+	[ngClass] = "{ class-name: condition}"
+	
+	Custom directive:
+	
+		<p changeRedColor> Text </p>
+		
+	component and directive similar
+	
+		app-root => <app-root> => binded with html => selector: "app-root"
+		
+		changeRedColor => changeRedColor => selector: "[changeRedColor]" => <div changeRedColor> </div>
+		
+		
+	*ngFor => Iteration
+	
+		Loop to some extent
+		
+		1) Array 
+		
+			let arr = [1,2,3,4,5,6];
+			
+			let i of [1,2,3,4,5,6]
+			
+			let i of arr
+		
+	
+	*ngIf => Hide / Show the HTML element
+	
+	*ngIf="boolean" , true, false
+		
+		
+		
+		
+	RecipeBook
+	
+	
+		HeaderComponent
+		
+			RecipeBook Recipes Shopping
+		
+		Recipes
+		
+			RecipeList
+				Recipe-Item
+				
+			Recipe-detail
+		
+			
+		Shopping
+		
+			Shopping-detail
+			
+			
+	=> Create and display with view 
+			
+			
+			header 
+			products
+			users
+			
+	Component communication:
+	
+		1.  Event Emitter ( @Input, @Output )`
+		
+			Parent to child 
+		
+			AppComponent => Parent for all
+			
+				header
+				
+				product
+				
+				users
+		
+		
+	
+		
+	
+		
 			
 			
 			
